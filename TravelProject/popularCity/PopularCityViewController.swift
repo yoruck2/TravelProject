@@ -7,23 +7,36 @@
 
 import UIKit
 
-class PopularCityViewController: UIViewController {
+class PopularCityViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+    let popularCityList = TravelInfo().travel
+    
+    @IBOutlet var popularCityTableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        popularCityTableView.rowHeight = 150
+        
+        popularCityTableView.delegate = self
+        popularCityTableView.dataSource = self
+        
+        let nib = UINib(nibName: "PopularCityTableViewCell", bundle: nil)
+        popularCityTableView.register(nib, forCellReuseIdentifier: "PopularCityTableViewCell")
+    
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        popularCityList.count
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PopularCityTableViewCell", for: indexPath) as! PopularCityTableViewCell
+        let data = popularCityList[indexPath.row]
+        
+        cell.configureCell(data: data)
+
+        return cell
+    }
 
 }
