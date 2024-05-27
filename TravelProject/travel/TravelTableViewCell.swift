@@ -18,7 +18,6 @@ class TravelTableViewCell: UITableViewCell {
     @IBOutlet var subTitle: UILabel!
     @IBOutlet var dateLabel: UILabel!
     
-    
     func setUpcell(data: Magazine) {
         travelImage.layer.cornerRadius = 15
         
