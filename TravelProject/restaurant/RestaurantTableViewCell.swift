@@ -9,10 +9,6 @@ import UIKit
 import Kingfisher
 
 class RestaurantTableViewCell: UITableViewCell {
-    
-    static var identifier: String {
-        return String(describing: self)
-    }
 
     @IBOutlet var restaurantImage: UIImageView!
     

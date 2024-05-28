@@ -20,6 +20,7 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dancing-banana.gif" translatesAutoresizingMaskIntoConstraints="NO" id="73c-g2-CYs">
                         <rect key="frame" x="20" y="17" width="165" height="165"/>
                         <constraints>
+                            <constraint firstAttribute="width" secondItem="73c-g2-CYs" secondAttribute="height" id="SR1-Po-Suh"/>
                             <constraint firstAttribute="height" constant="165" id="Sst-gf-ssG"/>
                         </constraints>
                     </imageView>
@@ -82,7 +83,6 @@
                     <constraint firstItem="Ke8-hT-UF8" firstAttribute="top" secondItem="73c-g2-CYs" secondAttribute="top" id="FWQ-7R-R9r"/>
                     <constraint firstItem="tJ1-YW-K2Q" firstAttribute="leading" secondItem="73c-g2-CYs" secondAttribute="trailing" constant="10" id="LLU-Aa-67h"/>
                     <constraint firstItem="73c-g2-CYs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="OOv-R7-kPi"/>
-                    <constraint firstItem="73c-g2-CYs" firstAttribute="width" secondItem="73c-g2-CYs" secondAttribute="height" id="SR1-Po-Suh"/>
                     <constraint firstItem="89F-in-rEi" firstAttribute="top" secondItem="tJ1-YW-K2Q" secondAttribute="bottom" constant="2" id="WZJ-jW-DGf"/>
                     <constraint firstItem="Pw8-kV-FrC" firstAttribute="leading" secondItem="73c-g2-CYs" secondAttribute="trailing" constant="8" symbolic="YES" id="WZk-ML-H58"/>
                     <constraint firstAttribute="bottom" secondItem="73c-g2-CYs" secondAttribute="bottom" constant="20" id="Zyf-bG-bJw"/>
