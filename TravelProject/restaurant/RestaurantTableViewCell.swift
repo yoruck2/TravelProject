@@ -25,11 +25,6 @@ class RestaurantTableViewCell: UITableViewCell {
         configureLayout()
         
     }
-
-    func setUpImageView() {
-        
-        
-    }
     
     func configureLayout() {
         nameLabel?.font = .boldSystemFont(ofSize: 17)

@@ -19,6 +19,7 @@
 		840D5B282C05DD5800308BB1 /* AdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D5B252C05DD5800308BB1 /* AdTableViewCell.swift */; };
 		840D5B2D2C05E9BC00308BB1 /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D5B2C2C05E9BC00308BB1 /* UITableViewCell+.swift */; };
 		840D5B312C05ECCF00308BB1 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D5B302C05ECCF00308BB1 /* UIColor+.swift */; };
+		8414D2662C063CA500B7DE55 /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414D2652C063CA500B7DE55 /* CategoryPickerViewController.swift */; };
 		84A9F04D2C032634007025E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9F04C2C032634007025E4 /* AppDelegate.swift */; };
 		84A9F04F2C032634007025E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9F04E2C032634007025E4 /* SceneDelegate.swift */; };
 		84A9F0512C032634007025E4 /* TravelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9F0502C032634007025E4 /* TravelTableViewController.swift */; };
@@ -31,7 +32,7 @@
 		84A9F0852C035486007025E4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 84A9F0842C035486007025E4 /* Kingfisher */; };
 		84A9F0882C0397E0007025E4 /* DateFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9F0872C0397E0007025E4 /* DateFormatter+.swift */; };
 		84A9F08C2C03A8A6007025E4 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 84A9F08B2C03A8A6007025E4 /* .gitignore */; };
-		84B4CAAC2C05F64D0075DA21 /* NumberFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B4CAAB2C05F64D0075DA21 /* NumberFormatter+.swift */; };
+		84B4CAAC2C05F64D0075DA21 /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B4CAAB2C05F64D0075DA21 /* Int+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		840D5B262C05DD5800308BB1 /* AdTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdTableViewCell.xib; sourceTree = "<group>"; };
 		840D5B2C2C05E9BC00308BB1 /* UITableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
 		840D5B302C05ECCF00308BB1 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		8414D2652C063CA500B7DE55 /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
 		84A9F0492C032634007025E4 /* TravelProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A9F04C2C032634007025E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84A9F04E2C032634007025E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +61,7 @@
 		84A9F0812C034E3D007025E4 /* TravelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewCell.swift; sourceTree = "<group>"; };
 		84A9F0872C0397E0007025E4 /* DateFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+.swift"; sourceTree = "<group>"; };
 		84A9F08B2C03A8A6007025E4 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		84B4CAAB2C05F64D0075DA21 /* NumberFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+.swift"; sourceTree = "<group>"; };
+		84B4CAAB2C05F64D0075DA21 /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				840D5AD42C04E26800308BB1 /* RestaurantViewController.swift */,
 				840D5AD62C04E27C00308BB1 /* RestaurantTableViewCell.swift */,
 				840D5AD72C04E27C00308BB1 /* RestaurantTableViewCell.xib */,
+				8414D2652C063CA500B7DE55 /* CategoryPickerViewController.swift */,
 			);
 			path = restaurant;
 			sourceTree = "<group>";
@@ -109,9 +112,10 @@
 		840D5B322C05F49F00308BB1 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				84A9F0872C0397E0007025E4 /* DateFormatter+.swift */,
 				840D5B2C2C05E9BC00308BB1 /* UITableViewCell+.swift */,
 				840D5B302C05ECCF00308BB1 /* UIColor+.swift */,
-				84B4CAAB2C05F64D0075DA21 /* NumberFormatter+.swift */,
+				84B4CAAB2C05F64D0075DA21 /* Int+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -138,7 +142,6 @@
 				84A9F07C2C034C6E007025E4 /* App */,
 				840D5B322C05F49F00308BB1 /* Extension */,
 				840D5AD22C04E21800308BB1 /* travel */,
-				84A9F0872C0397E0007025E4 /* DateFormatter+.swift */,
 				840D5ADC2C04F58100308BB1 /* popularCity */,
 				840D5AD32C04E23400308BB1 /* restaurant */,
 				84A9F0792C034BFB007025E4 /* Model */,
@@ -263,6 +266,7 @@
 			files = (
 				84A9F0772C034B3D007025E4 /* Restaurant.swift in Sources */,
 				840D5AD52C04E26800308BB1 /* RestaurantViewController.swift in Sources */,
+				8414D2662C063CA500B7DE55 /* CategoryPickerViewController.swift in Sources */,
 				84A9F0822C034E3D007025E4 /* TravelTableViewCell.swift in Sources */,
 				84A9F0512C032634007025E4 /* TravelTableViewController.swift in Sources */,
 				840D5AE12C04F64000308BB1 /* PopularCityTableViewCell.swift in Sources */,
@@ -270,7 +274,7 @@
 				84A9F04F2C032634007025E4 /* SceneDelegate.swift in Sources */,
 				84A9F0882C0397E0007025E4 /* DateFormatter+.swift in Sources */,
 				840D5ADB2C04F43200308BB1 /* TravelModel.swift in Sources */,
-				84B4CAAC2C05F64D0075DA21 /* NumberFormatter+.swift in Sources */,
+				84B4CAAC2C05F64D0075DA21 /* Int+.swift in Sources */,
 				840D5B2D2C05E9BC00308BB1 /* UITableViewCell+.swift in Sources */,
 				840D5B282C05DD5800308BB1 /* AdTableViewCell.swift in Sources */,
 				840D5AD82C04E27C00308BB1 /* RestaurantTableViewCell.swift in Sources */,
