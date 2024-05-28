@@ -137,30 +137,39 @@
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rsl-gF-1Vu">
+                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rsl-gF-1Vu">
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JH7-Dq-8Rc">
-                                                    <rect key="frame" x="8" y="5" width="75" height="35"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JH7-Dq-8Rc">
+                                                    <rect key="frame" x="14.999999999999993" y="5" width="114.33333333333331" height="35"/>
+                                                    <color key="tintColor" red="0.19726213179999999" green="0.19726213179999999" blue="0.19726213179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" image="line.horizontal.3" catalog="system" title=" 카테고리"/>
                                                     <connections>
                                                         <action selector="showCategoryButtonTapped:" destination="Mue-pJ-6L1" eventType="touchUpInside" id="kQi-Pv-NOR"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJ7-aj-F7h">
+                                                    <rect key="frame" x="264" y="4" width="114" height="35"/>
+                                                    <color key="tintColor" systemColor="systemRedColor"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" image="heart.fill" catalog="system" title=" 즐겨찾기"/>
+                                                </button>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JH7-Dq-8Rc" firstAttribute="top" secondItem="cwq-YW-v6J" secondAttribute="top" constant="5" id="7GW-Zb-nyb"/>
+                                                <constraint firstItem="JH7-Dq-8Rc" firstAttribute="leading" secondItem="cwq-YW-v6J" secondAttribute="leading" constant="15" id="8bx-hW-Gsl"/>
+                                                <constraint firstItem="cwq-YW-v6J" firstAttribute="trailing" secondItem="hJ7-aj-F7h" secondAttribute="trailing" constant="15" id="CFr-fL-f0E"/>
+                                                <constraint firstItem="cwq-YW-v6J" firstAttribute="bottom" secondItem="JH7-Dq-8Rc" secondAttribute="bottom" constant="4" id="E4x-gP-u7p"/>
+                                                <constraint firstItem="hJ7-aj-F7h" firstAttribute="top" secondItem="cwq-YW-v6J" secondAttribute="top" constant="4" id="PAo-ay-mhy"/>
+                                                <constraint firstItem="cwq-YW-v6J" firstAttribute="bottom" secondItem="hJ7-aj-F7h" secondAttribute="bottom" constant="5" id="RNS-2Z-CJ1"/>
+                                            </constraints>
                                             <viewLayoutGuide key="contentLayoutGuide" id="Idb-FW-C2C"/>
                                             <viewLayoutGuide key="frameLayoutGuide" id="cwq-YW-v6J"/>
                                         </scrollView>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    <constraints>
-                                        <constraint firstItem="rsl-gF-1Vu" firstAttribute="leading" secondItem="xk0-Rg-SAf" secondAttribute="leading" id="2zy-tQ-W76"/>
-                                        <constraint firstAttribute="bottom" secondItem="rsl-gF-1Vu" secondAttribute="bottom" id="LrP-kp-P7k"/>
-                                        <constraint firstItem="rsl-gF-1Vu" firstAttribute="top" secondItem="xk0-Rg-SAf" secondAttribute="top" id="V2z-dM-9DL"/>
-                                        <constraint firstAttribute="trailing" secondItem="rsl-gF-1Vu" secondAttribute="trailing" id="YmR-pl-kiz"/>
-                                    </constraints>
                                 </view>
                             </tableView>
                         </subviews>
@@ -178,6 +187,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="SeSAC Restaurant" id="Iyo-tM-Hin"/>
                     <connections>
+                        <outlet property="favoriteButton" destination="ldN-AE-9BX" id="Q5N-j1-g1X"/>
                         <outlet property="restaurantTableView" destination="ldN-AE-9BX" id="P8t-8J-geA"/>
                         <outlet property="searchBar" destination="dgg-Ad-MXT" id="ffN-xz-Mdx"/>
                         <outlet property="showCategoryButton" destination="JH7-Dq-8Rc" id="EWr-5P-dGU"/>
@@ -330,7 +340,9 @@
     </scenes>
     <resources>
         <image name="fork.knife" catalog="system" width="94" height="128"/>
+        <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="kingfisher-1.jpg" width="250" height="250"/>
+        <image name="line.horizontal.3" catalog="system" width="128" height="65"/>
         <image name="magazine" catalog="system" width="110" height="128"/>
         <image name="magazine.fill" catalog="system" width="110" height="128"/>
         <image name="star" catalog="system" width="128" height="116"/>
@@ -340,6 +352,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

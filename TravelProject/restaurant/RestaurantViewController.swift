@@ -18,11 +18,12 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
     
     let restaurantList = RestaurantList().restaurantArray
     var filteredList: [Restaurant] = []
-    var isFiltering: Bool = false
     
     @IBOutlet var showCategoryButton: UIButton!
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var restaurantTableView: UITableView!
+    @IBOutlet var favoriteButton: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,37 +44,24 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
         categoryVC.delegate = self
         present(categoryVC, animated: true)
     }
+    
     func configureTableView() {
         
-        //        let left = UIBarButtonItem(title: "한식만", style: .plain, target: self, action: #selector(leftBarButtonClicked))
-        //        navigationItem.leftBarButtonItem = left
-        
-        restaurantTableView.rowHeight = 230
+        restaurantTableView.rowHeight = 200
         
         searchBar.delegate = self
         restaurantTableView.delegate = self
         restaurantTableView.dataSource = self
         
         registerCell(id: "RestaurantTableViewCell")
-        let searchController = UISearchController()
-        self.navigationItem.searchController = searchController
+        
+//        let searchController = UISearchController()
+//        self.navigationItem.searchController = searchController
     }
     
     func registerCell(id: String) {
         let nib = UINib(nibName: id, bundle: nil)
         restaurantTableView.register(nib, forCellReuseIdentifier: id)
-    }
-    
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
-        var searchList: [Restaurant] = []
-        
-        for item in restaurantList {
-            if item.name.contains(searchBar.text!) || item.category.contains(searchBar.text!) {
-                searchList.append(item)
-            }
-        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -90,14 +78,18 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
 //        
 //        let data = filteredList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantTableViewCell", for: indexPath) as! RestaurantTableViewCell
-        
-        if selectedCategory == "전체" {
-            cell.configureCell(data: restaurantList[indexPath.row])
-            return cell
-        } else {
-            filteredList = restaurantList.filter({ $0.category == selectedCategory })
+        if isFiltering {
             cell.configureCell(data: filteredList[indexPath.row])
             return cell
+        } else {
+            if selectedCategory == "전체" {
+                cell.configureCell(data: restaurantList[indexPath.row])
+                return cell
+            } else {
+                filteredList = restaurantList.filter({ $0.category == selectedCategory })
+                cell.configureCell(data: filteredList[indexPath.row])
+                return cell
+            }
         }
     }
 }
@@ -119,6 +111,28 @@ extension RestaurantViewController: UIPickerViewDelegate, UIPickerViewDataSource
 }
 
 extension RestaurantViewController: UISearchResultsUpdating {
+    
+    private var isFiltering: Bool {
+            let searchController = self.navigationItem.searchController
+            let isActive = searchController?.isActive ?? false
+            let isSearchBarHasText = searchController?.searchBar.text?.isEmpty == false
+            
+            return isActive && isSearchBarHasText
+        }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        var searchList: [Restaurant] = []
+        
+        for item in restaurantList {
+            if item.name.contains(searchBar.text!) || item.category.contains(searchBar.text!) {
+                searchList.append(item)
+            }
+        }
+        filteredList = searchList
+        restaurantTableView.reloadData()
+    }
+    
     func updateSearchResults(for searchController: UISearchController) {
         
         guard let text = searchController.searchBar.text?.lowercased() else { return }
