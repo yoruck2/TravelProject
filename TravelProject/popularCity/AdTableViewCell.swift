@@ -9,15 +9,37 @@ import UIKit
 
 class AdTableViewCell: UITableViewCell {
 
+    @IBOutlet var adContentLabel: UILabel!
+    @IBOutlet var adbadgeLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        configureLayout()
+        adbadgeLabel.layer.cornerRadius = 13
+        adbadgeLabel.clipsToBounds = true
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        
+    }
+    
+    func configureLayout() {
+        adContentLabel.textAlignment = .center
+        adContentLabel.font = .boldSystemFont(ofSize: 20)
+        adContentLabel.numberOfLines = 0
+        
+        adbadgeLabel.text = "AD"
+        adbadgeLabel.backgroundColor = .white
+        adbadgeLabel.textAlignment = .center
+        backgroundColor = UIColor().RandomColor()
+        
+        self.selectionStyle = .none
+    }
+    
+    func configureCell(data: Travel) {
+        adContentLabel.text = data.title
+    }
 }

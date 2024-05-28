@@ -92,24 +92,24 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWA-he-lSW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-663" y="-775"/>
+            <point key="canvasLocation" x="-663" y="-952"/>
         </scene>
-        <!--Item-->
+        <!--맛집-->
         <scene sceneID="NhG-LP-UdX">
             <objects>
                 <navigationController id="vvc-px-5ff" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Qyo-Tt-rIx"/>
+                    <tabBarItem key="tabBarItem" title="맛집" image="fork.knife" catalog="system" selectedImage="fork.knife" id="Qyo-Tt-rIx"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1la-Ce-s3k">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Mue-pJ-6L1" kind="relationship" relationship="rootViewController" id="pa0-8M-b1h"/>
+                        <segue destination="Mue-pJ-6L1" kind="relationship" relationship="rootViewController" id="scP-98-HLD"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zdb-nf-lHe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1570" y="-24"/>
+            <point key="canvasLocation" x="-1570" y="-202"/>
         </scene>
         <!--SeSAC Restaurant-->
         <scene sceneID="TvF-fd-Tt8">
@@ -167,13 +167,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nvW-ss-u1a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-663" y="-25"/>
+            <point key="canvasLocation" x="-663" y="-202"/>
         </scene>
-        <!--Item-->
+        <!--인기 장소-->
         <scene sceneID="yHV-1X-PA9">
             <objects>
                 <navigationController id="XqG-qg-S06" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="GRr-43-JMT"/>
+                    <tabBarItem key="tabBarItem" title="인기 장소" image="star" catalog="system" selectedImage="star.fill" id="GRr-43-JMT"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KEN-nm-Z5A">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -184,7 +184,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ger-CQ-aB3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1597" y="669"/>
+            <point key="canvasLocation" x="-1570" y="497"/>
         </scene>
         <!--도시 상세 정보-->
         <scene sceneID="UvL-Lm-KhI">
@@ -215,7 +215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X20-9y-hTb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-663" y="668"/>
+            <point key="canvasLocation" x="-663" y="496"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cck-tQ-vRY">
@@ -234,30 +234,35 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="czA-JT-xTI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2787" y="-400"/>
+            <point key="canvasLocation" x="-2471" y="2"/>
         </scene>
-        <!--Item-->
+        <!--매거진-->
         <scene sceneID="vFD-mt-ld9">
             <objects>
                 <navigationController id="jdb-3n-mVZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="WzQ-4Q-ig2"/>
+                    <tabBarItem key="tabBarItem" title="매거진" image="magazine" catalog="system" selectedImage="magazine.fill" id="WzQ-4Q-ig2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4oO-E6-GwH">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Ce6-Gu-o0y" kind="relationship" relationship="rootViewController" id="4cJ-kp-93Z"/>
+                        <segue destination="Ce6-Gu-o0y" kind="relationship" relationship="rootViewController" id="TMn-34-TKh"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aCf-1Q-bdb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1569" y="-775"/>
+            <point key="canvasLocation" x="-1570" y="-952"/>
         </scene>
     </scenes>
     <resources>
+        <image name="fork.knife" catalog="system" width="94" height="128"/>
         <image name="kingfisher-1.jpg" width="250" height="250"/>
+        <image name="magazine" catalog="system" width="110" height="128"/>
+        <image name="magazine.fill" catalog="system" width="110" height="128"/>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
