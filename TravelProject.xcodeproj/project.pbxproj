@@ -14,6 +14,11 @@
 		840D5ADE2C04F5F900308BB1 /* PopularCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D5ADD2C04F5F900308BB1 /* PopularCityViewController.swift */; };
 		840D5AE12C04F64000308BB1 /* PopularCityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D5ADF2C04F64000308BB1 /* PopularCityTableViewCell.swift */; };
 		840D5AE22C04F64000308BB1 /* PopularCityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840D5AE02C04F64000308BB1 /* PopularCityTableViewCell.xib */; };
+		840D5AE52C055F1500308BB1 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 840D5AE42C055F1500308BB1 /* Cosmos */; };
+		840D5B272C05DD5800308BB1 /* AdTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840D5B262C05DD5800308BB1 /* AdTableViewCell.xib */; };
+		840D5B282C05DD5800308BB1 /* AdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D5B252C05DD5800308BB1 /* AdTableViewCell.swift */; };
+		840D5B2D2C05E9BC00308BB1 /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D5B2C2C05E9BC00308BB1 /* UITableViewCell+.swift */; };
+		840D5B312C05ECCF00308BB1 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D5B302C05ECCF00308BB1 /* UIColor+.swift */; };
 		84A9F04D2C032634007025E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9F04C2C032634007025E4 /* AppDelegate.swift */; };
 		84A9F04F2C032634007025E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9F04E2C032634007025E4 /* SceneDelegate.swift */; };
 		84A9F0512C032634007025E4 /* TravelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9F0502C032634007025E4 /* TravelTableViewController.swift */; };
@@ -26,6 +31,7 @@
 		84A9F0852C035486007025E4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 84A9F0842C035486007025E4 /* Kingfisher */; };
 		84A9F0882C0397E0007025E4 /* DateFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9F0872C0397E0007025E4 /* DateFormatter+.swift */; };
 		84A9F08C2C03A8A6007025E4 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 84A9F08B2C03A8A6007025E4 /* .gitignore */; };
+		84B4CAAC2C05F64D0075DA21 /* NumberFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B4CAAB2C05F64D0075DA21 /* NumberFormatter+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +42,10 @@
 		840D5ADD2C04F5F900308BB1 /* PopularCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCityViewController.swift; sourceTree = "<group>"; };
 		840D5ADF2C04F64000308BB1 /* PopularCityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCityTableViewCell.swift; sourceTree = "<group>"; };
 		840D5AE02C04F64000308BB1 /* PopularCityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCityTableViewCell.xib; sourceTree = "<group>"; };
+		840D5B252C05DD5800308BB1 /* AdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdTableViewCell.swift; sourceTree = "<group>"; };
+		840D5B262C05DD5800308BB1 /* AdTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdTableViewCell.xib; sourceTree = "<group>"; };
+		840D5B2C2C05E9BC00308BB1 /* UITableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
+		840D5B302C05ECCF00308BB1 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		84A9F0492C032634007025E4 /* TravelProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A9F04C2C032634007025E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84A9F04E2C032634007025E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +59,7 @@
 		84A9F0812C034E3D007025E4 /* TravelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewCell.swift; sourceTree = "<group>"; };
 		84A9F0872C0397E0007025E4 /* DateFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+.swift"; sourceTree = "<group>"; };
 		84A9F08B2C03A8A6007025E4 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		84B4CAAB2C05F64D0075DA21 /* NumberFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840D5AE52C055F1500308BB1 /* Cosmos in Frameworks */,
 				84A9F0852C035486007025E4 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,8 +100,20 @@
 				840D5ADD2C04F5F900308BB1 /* PopularCityViewController.swift */,
 				840D5ADF2C04F64000308BB1 /* PopularCityTableViewCell.swift */,
 				840D5AE02C04F64000308BB1 /* PopularCityTableViewCell.xib */,
+				840D5B252C05DD5800308BB1 /* AdTableViewCell.swift */,
+				840D5B262C05DD5800308BB1 /* AdTableViewCell.xib */,
 			);
 			path = popularCity;
+			sourceTree = "<group>";
+		};
+		840D5B322C05F49F00308BB1 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				840D5B2C2C05E9BC00308BB1 /* UITableViewCell+.swift */,
+				840D5B302C05ECCF00308BB1 /* UIColor+.swift */,
+				84B4CAAB2C05F64D0075DA21 /* NumberFormatter+.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		84A9F0402C032634007025E4 = {
@@ -112,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				84A9F07C2C034C6E007025E4 /* App */,
+				840D5B322C05F49F00308BB1 /* Extension */,
 				840D5AD22C04E21800308BB1 /* travel */,
 				84A9F0872C0397E0007025E4 /* DateFormatter+.swift */,
 				840D5ADC2C04F58100308BB1 /* popularCity */,
@@ -171,6 +196,7 @@
 			name = TravelProject;
 			packageProductDependencies = (
 				84A9F0842C035486007025E4 /* Kingfisher */,
+				840D5AE42C055F1500308BB1 /* Cosmos */,
 			);
 			productName = TravelProject;
 			productReference = 84A9F0492C032634007025E4 /* TravelProject.app */;
@@ -202,6 +228,7 @@
 			mainGroup = 84A9F0402C032634007025E4;
 			packageReferences = (
 				84A9F0832C035486007025E4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				840D5AE32C055F1500308BB1 /* XCRemoteSwiftPackageReference "Cosmos" */,
 			);
 			productRefGroup = 84A9F04A2C032634007025E4 /* Products */;
 			projectDirPath = "";
@@ -219,6 +246,7 @@
 			files = (
 				840D5AE22C04F64000308BB1 /* PopularCityTableViewCell.xib in Resources */,
 				84A9F08C2C03A8A6007025E4 /* .gitignore in Resources */,
+				840D5B272C05DD5800308BB1 /* AdTableViewCell.xib in Resources */,
 				84A9F0562C032635007025E4 /* Assets.xcassets in Resources */,
 				840D5AD92C04E27C00308BB1 /* RestaurantTableViewCell.xib in Resources */,
 				84A9F0802C034DAD007025E4 /* Main.storyboard in Resources */,
@@ -242,9 +270,13 @@
 				84A9F04F2C032634007025E4 /* SceneDelegate.swift in Sources */,
 				84A9F0882C0397E0007025E4 /* DateFormatter+.swift in Sources */,
 				840D5ADB2C04F43200308BB1 /* TravelModel.swift in Sources */,
+				84B4CAAC2C05F64D0075DA21 /* NumberFormatter+.swift in Sources */,
+				840D5B2D2C05E9BC00308BB1 /* UITableViewCell+.swift in Sources */,
+				840D5B282C05DD5800308BB1 /* AdTableViewCell.swift in Sources */,
 				840D5AD82C04E27C00308BB1 /* RestaurantTableViewCell.swift in Sources */,
 				840D5ADE2C04F5F900308BB1 /* PopularCityViewController.swift in Sources */,
 				84A9F0782C034B3D007025E4 /* MagazineInfo.swift in Sources */,
+				840D5B312C05ECCF00308BB1 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +492,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		840D5AE32C055F1500308BB1 /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/Cosmos";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 25.0.1;
+			};
+		};
 		84A9F0832C035486007025E4 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
@@ -471,6 +511,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		840D5AE42C055F1500308BB1 /* Cosmos */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 840D5AE32C055F1500308BB1 /* XCRemoteSwiftPackageReference "Cosmos" */;
+			productName = Cosmos;
+		};
 		84A9F0842C035486007025E4 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 84A9F0832C035486007025E4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
