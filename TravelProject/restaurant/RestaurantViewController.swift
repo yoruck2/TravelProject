@@ -17,6 +17,12 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        configureTableView()
+        filteredList = restaurantList
+    }
+    
+    func configureTableView() {
         
         let left = UIBarButtonItem(title: "한식만", style: .plain, target: self, action: #selector(leftBarButtonClicked))
         navigationItem.leftBarButtonItem = left
@@ -27,10 +33,12 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
         restaurantTableView.delegate = self
         restaurantTableView.dataSource = self
         
-        let nib = UINib(nibName: "RestaurantTableViewCell", bundle: nil)
-        restaurantTableView.register(nib, forCellReuseIdentifier: "RestaurantTableViewCell")
-        
-        filteredList = restaurantList
+        registerCell(id: "RestaurantTableViewCell")
+    }
+    
+    func registerCell(id: String) {
+        let nib = UINib(nibName: id, bundle: nil)
+        restaurantTableView.register(nib, forCellReuseIdentifier: id)
     }
     
 //    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -46,7 +54,8 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @objc
     func leftBarButtonClicked() {
-        let filteredList = restaurantList.filter { $0.category == "한식" }
+        
+        filteredList = restaurantList.filter { $0.category == "한식" }
         restaurantTableView.reloadData()
         print(filteredList)
         print(filteredList.count)
