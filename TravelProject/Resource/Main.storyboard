@@ -293,21 +293,6 @@
             </objects>
             <point key="canvasLocation" x="-663" y="704"/>
         </scene>
-        <!--Ad View Controller-->
-        <scene sceneID="Hel-Y9-ix5">
-            <objects>
-                <viewController storyboardIdentifier="AdViewController" id="svB-Uh-qXe" customClass="AdViewController" customModule="TravelProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nL5-IX-jP5">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="JXJ-TI-bik"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="M1F-Xy-HcI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="184" y="1203"/>
-        </scene>
         <!--Traveling Spot View Controller-->
         <scene sceneID="x1U-Xr-KP8">
             <objects>
@@ -347,7 +332,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9AD-HB-uA0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="184" y="545"/>
+            <point key="canvasLocation" x="184" y="705"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cck-tQ-vRY">
