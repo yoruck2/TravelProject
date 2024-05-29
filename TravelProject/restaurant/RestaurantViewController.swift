@@ -7,13 +7,7 @@
 
 import UIKit
 
-protocol ViewControllerDelegate: AnyObject {
-    func dismissViewController(data: String)
-}
-
 class RestaurantViewController: UIViewController {
-
-//    let category = ["전체", "한식", "카페", "중식", "분식", "일식", "양식", "경양식"]
     
     let restaurantList = RestaurantList().restaurantArray
     var filteredList: [Restaurant] = []
@@ -41,7 +35,6 @@ class RestaurantViewController: UIViewController {
         configureTableView()
         configureSearchBar()
         filteredList = restaurantList
-        
         
     }
     

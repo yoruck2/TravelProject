@@ -25,13 +25,13 @@ class TravelingSpotViewController: UIViewController {
         titleLabel?.font = .systemFont(ofSize: 50, weight: .semibold)
         titleLabel?.textColor = .black
         navigationItem.title = titleString
-        
-        if titleString == "광고 화면" {
-            backButton?.isHidden = true
-        }
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
-        dismiss(animated: true)
+        if titleString == "광고 화면" {
+            navigationController?.popViewController(animated: true)
+        } else {
+            dismiss(animated: true)
+        }
     }
 }

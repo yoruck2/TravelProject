@@ -39,7 +39,7 @@ class CategoryPickerViewController: UIViewController, UIPickerViewDelegate, UIPi
     }
 
     @IBAction func confirmButtonTapped(_ sender: UIButton) {
-        delegate?.dismissViewController(data: selectedCategory)
+        delegate?.dismissViewController?(data: selectedCategory)
         dismiss(animated: true)
     }
 
