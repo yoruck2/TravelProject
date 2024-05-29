@@ -63,8 +63,15 @@ class PopularCityViewController: UIViewController, UITableViewDelegate, UITableV
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PopularCityTableViewCell", for: indexPath) as! PopularCityTableViewCell
-            cell.configureCell(data: data)
+            cell.configureCell(data: data, row: indexPath.row)
             return cell
         }
+    }
+}
+
+extension PopularCityViewController: ViewControllerDelegate {
+
+    func applyData(row: Int) {
+        popularCityTableView.reloadRows(at: [IndexPath(row: row, section: 0)], with: .automatic)
     }
 }
