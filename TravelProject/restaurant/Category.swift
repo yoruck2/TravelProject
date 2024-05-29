@@ -34,4 +34,6 @@ enum Category: String {
             return #colorLiteral(red: 0.8212783933, green: 0.8085442185, blue: 0.07338868827, alpha: 1)
         }
     }
+    
+    static var categoryList = ["전체", korean.rawValue, cafe.rawValue, chinese.rawValue, snackBar.rawValue, japanese.rawValue, western.rawValue, lightWestern.rawValue]
 }

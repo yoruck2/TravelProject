@@ -17,16 +17,18 @@ class PopularCityTableViewCell: UITableViewCell {
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var saveLabel: UILabel!
     @IBOutlet var ratingLabel: CosmosView!
-    @IBOutlet var gradeLabel: UILabel!
-    
     @IBOutlet var cellImage: UIImageView!
-    
+    @IBOutlet var heartButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         configureLayout()
     }
-
+    
+    @IBAction func heartButtonTapped(_ sender: UIButton) {
+        saveLabel.text
+    }
+    
     func configureLayout() {
         spotNameLabel?.font = .boldSystemFont(ofSize: 17)
         descriptionLabel?.font = .systemFont(ofSize: 15)
@@ -63,4 +65,14 @@ class PopularCityTableViewCell: UITableViewCell {
         ratingLabel.text = "(\(grade))"
         
     }
+    
+//    func changeSaveCount(data: Int) -> Int {
+//        if heartButton.state == .selected {
+//            var value = data
+//            value += 1
+//            return value
+//        } else {
+//            
+//        }
+//    }
 }

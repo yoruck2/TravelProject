@@ -23,6 +23,7 @@ class RestaurantTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         configureLayout()
+        setUpCheckButton()
         
     }
     @IBAction func heartButtonTapped(_ sender: UIButton) {

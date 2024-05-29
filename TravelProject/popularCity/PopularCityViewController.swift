@@ -15,12 +15,11 @@ class PopularCityViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        configureCell()
+        configuretableView()
     }
     
-    func configureCell() {
-        popularCityTableView.rowHeight = 150
+    func configuretableView() {
+        popularCityTableView.rowHeight = UITableView.automaticDimension
         popularCityTableView.delegate = self
         popularCityTableView.dataSource = self
         registerCell(id: "PopularCityTableViewCell")
@@ -34,6 +33,24 @@ class PopularCityViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         popularCityList.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let data = popularCityList[indexPath.row]
+        
+        if data.ad {
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "TravelingSpotViewController") as! TravelingSpotViewController
+            vc.titleString = "광고 화면"
+            navigationController?.pushViewController(vc, animated: true)
+     
+        } else {
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "TravelingSpotViewController") as! TravelingSpotViewController
+            vc.titleString = "관광지 화면"
+            self.navigationController?.modalPresentationStyle = .fullScreen
+            present(vc, animated: true)
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
