@@ -1,5 +1,5 @@
 //
-//  PopularCityTableViewCell.swift
+//  CityInfoTableViewCell.swift
 //  TravelProject
 //
 //  Created by dopamint on 5/28/24.
@@ -9,9 +9,7 @@ import UIKit
 import Kingfisher
 import Cosmos
 
-class PopularCityTableViewCell: UITableViewCell {
-    
-    //    static let identifier = "PopularCityTableViewCell"
+class CityInfoTableViewCell: UITableViewCell {
     
     @IBOutlet var spotNameLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!

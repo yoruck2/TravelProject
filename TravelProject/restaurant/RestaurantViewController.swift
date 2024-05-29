@@ -26,7 +26,8 @@ class RestaurantViewController: UIViewController {
     
     @IBOutlet var showCategoryButton: UIButton!
     @IBOutlet var restaurantTableView: UITableView!
-    @IBOutlet var favoriteButton: UITableView!
+    @IBOutlet var favoriteButton: UIButton!
+    
     
     
     override func viewDidLoad() {
@@ -35,6 +36,9 @@ class RestaurantViewController: UIViewController {
         configureTableView()
         configureSearchBar()
         filteredList = restaurantList
+        
+    }
+    @IBAction func favoriteButtonTapped(_ sender: UIButton) {
         
     }
     

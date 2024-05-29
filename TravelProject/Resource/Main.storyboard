@@ -144,6 +144,9 @@
                                                     <color key="tintColor" systemColor="systemRedColor"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" image="heart.fill" catalog="system" title=" 즐겨찾기"/>
+                                                    <connections>
+                                                        <action selector="favoriteButtonTapped:" destination="Mue-pJ-6L1" eventType="touchUpInside" id="JGY-eV-HYk"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -180,7 +183,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="SeSAC Restaurant" id="Iyo-tM-Hin"/>
                     <connections>
-                        <outlet property="favoriteButton" destination="ldN-AE-9BX" id="Q5N-j1-g1X"/>
+                        <outlet property="favoriteButton" destination="hJ7-aj-F7h" id="RPT-Ce-Kkj"/>
                         <outlet property="restaurantTableView" destination="ldN-AE-9BX" id="P8t-8J-geA"/>
                         <outlet property="showCategoryButton" destination="JH7-Dq-8Rc" id="EWr-5P-dGU"/>
                     </connections>
@@ -262,10 +265,64 @@
             </objects>
             <point key="canvasLocation" x="-1570" y="705"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="239-8P-vO2">
+            <objects>
+                <navigationController id="UtW-aq-c3k" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="DY8-cK-STV"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pc7-4y-kjS">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3Vo-Fc-cfn" kind="relationship" relationship="rootViewController" id="58R-zA-oub"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TZE-Rg-4om" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1570" y="1422"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IoV-Hx-KuN">
+            <objects>
+                <viewController id="3Vo-Fc-cfn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z3b-Wa-RGQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iZf-Ou-yRo">
+                                <rect key="frame" x="131" y="52" width="131" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="adn-zv-XDN">
+                                <rect key="frame" x="0.0" y="83" width="393" height="686"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HLa-qp-vo3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HLa-qp-vo3" firstAttribute="bottom" secondItem="adn-zv-XDN" secondAttribute="bottom" id="Amn-NL-DQw"/>
+                            <constraint firstItem="HLa-qp-vo3" firstAttribute="trailing" secondItem="adn-zv-XDN" secondAttribute="trailing" id="QIw-xm-5jA"/>
+                            <constraint firstItem="adn-zv-XDN" firstAttribute="top" secondItem="iZf-Ou-yRo" secondAttribute="bottom" id="T8C-ik-3Hz"/>
+                            <constraint firstItem="adn-zv-XDN" firstAttribute="leading" secondItem="HLa-qp-vo3" secondAttribute="leading" id="c8R-wz-ViJ"/>
+                            <constraint firstItem="adn-zv-XDN" firstAttribute="centerY" secondItem="z3b-Wa-RGQ" secondAttribute="centerY" id="sxm-0H-sBO"/>
+                            <constraint firstItem="adn-zv-XDN" firstAttribute="centerX" secondItem="z3b-Wa-RGQ" secondAttribute="centerX" id="vJ9-3L-Ce6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BUl-qQ-gqk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VnD-2U-9vc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-663.35877862595419" y="1421.8309859154931"/>
+        </scene>
         <!--도시 상세 정보-->
         <scene sceneID="UvL-Lm-KhI">
             <objects>
-                <viewController id="Oxq-ki-EVd" customClass="PopularCityViewController" customModule="TravelProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Oxq-ki-EVd" customClass="CityInfoViewController" customModule="TravelProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XVl-yO-D4p">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -286,7 +343,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="도시 상세 정보" id="pCr-xw-lgt"/>
                     <connections>
-                        <outlet property="popularCityTableView" destination="jkd-cY-rzn" id="qcU-F3-EM1"/>
+                        <outlet property="cityInfoTableView" destination="jkd-cY-rzn" id="qcU-F3-EM1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X20-9y-hTb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -347,6 +404,7 @@
                         <segue destination="vvc-px-5ff" kind="relationship" relationship="viewControllers" id="d1x-oJ-FsR"/>
                         <segue destination="jdb-3n-mVZ" kind="relationship" relationship="viewControllers" id="eRz-T4-udv"/>
                         <segue destination="XqG-qg-S06" kind="relationship" relationship="viewControllers" id="sfM-3L-GBj"/>
+                        <segue destination="UtW-aq-c3k" kind="relationship" relationship="viewControllers" id="f2k-lG-gTN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="czA-JT-xTI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

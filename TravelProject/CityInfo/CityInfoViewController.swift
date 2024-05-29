@@ -1,5 +1,5 @@
 //
-//  PopularCityViewController.swift
+//  CityInfoViewController.swift
 //  TravelProject
 //
 //  Created by dopamint on 5/28/24.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-class PopularCityViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CityInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let popularCityList = TravelInfo.travel
     
-    @IBOutlet var popularCityTableView: UITableView!
+    @IBOutlet var cityInfoTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,16 +19,16 @@ class PopularCityViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func configuretableView() {
-        popularCityTableView.rowHeight = UITableView.automaticDimension
-        popularCityTableView.delegate = self
-        popularCityTableView.dataSource = self
-        registerCell(id: "PopularCityTableViewCell")
+        cityInfoTableView.rowHeight = UITableView.automaticDimension
+        cityInfoTableView.delegate = self
+        cityInfoTableView.dataSource = self
+        registerCell(id: "CityInfoTableViewCell")
         registerCell(id: "AdTableViewCell")
     }
     
     func registerCell(id: String) {
         let nib = UINib(nibName: id, bundle: nil)
-        popularCityTableView.register(nib, forCellReuseIdentifier: id)
+        cityInfoTableView.register(nib, forCellReuseIdentifier: id)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -62,16 +62,16 @@ class PopularCityViewController: UIViewController, UITableViewDelegate, UITableV
             cell.configureCell(data: data)
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "PopularCityTableViewCell", for: indexPath) as! PopularCityTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CityInfoTableViewCell", for: indexPath) as! CityInfoTableViewCell
             cell.configureCell(data: data, row: indexPath.row)
             return cell
         }
     }
 }
 
-extension PopularCityViewController: ViewControllerDelegate {
+extension CityInfoViewController: ViewControllerDelegate {
 
     func applyData(row: Int) {
-        popularCityTableView.reloadRows(at: [IndexPath(row: row, section: 0)], with: .automatic)
+        cityInfoTableView.reloadRows(at: [IndexPath(row: row, section: 0)], with: .automatic)
     }
 }
