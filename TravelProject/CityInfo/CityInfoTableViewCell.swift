@@ -33,13 +33,12 @@ class CityInfoTableViewCell: UITableViewCell {
         if heartButton.isSelected == true {
             saveCount += 1
             saveLabel.text = "･ ♥ \((saveCount).formatThirdComma)"
-//            heartButton.tintColor = UIColor.red
         } else {
             saveCount -= 1
             saveLabel.text = "･ ♥ \((saveCount).formatThirdComma)"
-//            heartButton.tintColor = .white
         }
         
+        // MARK: - 셀의 변경사항을 뷰컨트롤러가 가진 tableView를 업데이트 시켜주기 위해 델리게이트를 통한 업데이트 할 셀의 row 전달
         delegate?.applyData?(row: cellRow)
     }
     

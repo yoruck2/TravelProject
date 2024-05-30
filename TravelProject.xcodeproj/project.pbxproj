@@ -21,12 +21,13 @@
 		840D5B312C05ECCF00308BB1 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D5B302C05ECCF00308BB1 /* UIColor+.swift */; };
 		8414D2662C063CA500B7DE55 /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414D2652C063CA500B7DE55 /* CategoryPickerViewController.swift */; };
 		8414D2682C067B7200B7DE55 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414D2672C067B7200B7DE55 /* Category.swift */; };
-		8462F6C72C073E58004CC40D /* TravelingSpotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462F6C62C073E58004CC40D /* TravelingSpotViewController.swift */; };
+		8462F6C72C073E58004CC40D /* CityInfoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462F6C62C073E58004CC40D /* CityInfoDetailViewController.swift */; };
 		8462F6CB2C074D2E004CC40D /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462F6CA2C074D2E004CC40D /* CityInfo.swift */; };
 		8462F6CD2C0766CA004CC40D /* ViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462F6CC2C0766CA004CC40D /* ViewControllerDelegate.swift */; };
 		8462F6D02C07A689004CC40D /* PopularCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462F6CF2C07A689004CC40D /* PopularCityViewController.swift */; };
 		8462F6DC2C089596004CC40D /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462F6DB2C089596004CC40D /* UIFont+.swift */; };
 		8462F6DE2C08A02A004CC40D /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462F6DD2C08A02A004CC40D /* UIViewController+.swift */; };
+		8462F6E02C08AD30004CC40D /* AdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462F6DF2C08AD30004CC40D /* AdViewController.swift */; };
 		84A9F04D2C032634007025E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9F04C2C032634007025E4 /* AppDelegate.swift */; };
 		84A9F04F2C032634007025E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9F04E2C032634007025E4 /* SceneDelegate.swift */; };
 		84A9F0512C032634007025E4 /* TravelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9F0502C032634007025E4 /* TravelTableViewController.swift */; };
@@ -56,12 +57,13 @@
 		840D5B302C05ECCF00308BB1 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		8414D2652C063CA500B7DE55 /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
 		8414D2672C067B7200B7DE55 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		8462F6C62C073E58004CC40D /* TravelingSpotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelingSpotViewController.swift; sourceTree = "<group>"; };
+		8462F6C62C073E58004CC40D /* CityInfoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoDetailViewController.swift; sourceTree = "<group>"; };
 		8462F6CA2C074D2E004CC40D /* CityInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CityInfo.swift; path = TravelProject/Model/CityInfo.swift; sourceTree = SOURCE_ROOT; };
 		8462F6CC2C0766CA004CC40D /* ViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDelegate.swift; sourceTree = "<group>"; };
 		8462F6CF2C07A689004CC40D /* PopularCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCityViewController.swift; sourceTree = "<group>"; };
 		8462F6DB2C089596004CC40D /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		8462F6DD2C08A02A004CC40D /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		8462F6DF2C08AD30004CC40D /* AdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewController.swift; sourceTree = "<group>"; };
 		84A9F0492C032634007025E4 /* TravelProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A9F04C2C032634007025E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84A9F04E2C032634007025E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,7 +122,8 @@
 				840D5AE02C04F64000308BB1 /* CityInfoTableViewCell.xib */,
 				840D5B252C05DD5800308BB1 /* AdTableViewCell.swift */,
 				840D5B262C05DD5800308BB1 /* AdTableViewCell.xib */,
-				8462F6C62C073E58004CC40D /* TravelingSpotViewController.swift */,
+				8462F6C62C073E58004CC40D /* CityInfoDetailViewController.swift */,
+				8462F6DF2C08AD30004CC40D /* AdViewController.swift */,
 			);
 			path = CityInfo;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				8414D2662C063CA500B7DE55 /* CategoryPickerViewController.swift in Sources */,
 				8462F6CB2C074D2E004CC40D /* CityInfo.swift in Sources */,
 				84A9F0822C034E3D007025E4 /* TravelTableViewCell.swift in Sources */,
+				8462F6E02C08AD30004CC40D /* AdViewController.swift in Sources */,
 				84A9F0512C032634007025E4 /* TravelTableViewController.swift in Sources */,
 				8462F6DC2C089596004CC40D /* UIFont+.swift in Sources */,
 				8414D2682C067B7200B7DE55 /* Category.swift in Sources */,
@@ -306,7 +310,7 @@
 				84A9F04D2C032634007025E4 /* AppDelegate.swift in Sources */,
 				8462F6D02C07A689004CC40D /* PopularCityViewController.swift in Sources */,
 				84A9F04F2C032634007025E4 /* SceneDelegate.swift in Sources */,
-				8462F6C72C073E58004CC40D /* TravelingSpotViewController.swift in Sources */,
+				8462F6C72C073E58004CC40D /* CityInfoDetailViewController.swift in Sources */,
 				8462F6CD2C0766CA004CC40D /* ViewControllerDelegate.swift in Sources */,
 				84A9F0882C0397E0007025E4 /* DateFormatter+.swift in Sources */,
 				840D5ADB2C04F43200308BB1 /* TravelModel.swift in Sources */,
