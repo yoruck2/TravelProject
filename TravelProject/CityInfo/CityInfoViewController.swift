@@ -9,7 +9,7 @@ import UIKit
 
 class CityInfoViewController: UIViewController {
     
-    let popularCityList = TravelInfo.travel
+    var popularCityList = TravelInfo.travel
     
     @IBOutlet var cityInfoTableView: UITableView!
     
@@ -43,16 +43,19 @@ extension CityInfoViewController: UITableViewDelegate, UITableViewDataSource {
         
         if data.ad {
             let sb = UIStoryboard(name: "Main", bundle: nil)
-            let vc = sb.instantiateViewController(withIdentifier: TravelingSpotViewController.identifier) as! TravelingSpotViewController
+            let vc = sb.instantiateViewController(withIdentifier: AdViewController.identifier) as! AdViewController
             vc.titleString = "광고 화면"
-            navigationController?.pushViewController(vc, animated: true)
+            self.navigationController?.modalPresentationStyle = .fullScreen
+            present(vc, animated: true)
+            
      
         } else {
             let sb = UIStoryboard(name: "Main", bundle: nil)
-            let vc = sb.instantiateViewController(withIdentifier: TravelingSpotViewController.identifier) as! TravelingSpotViewController
-            vc.titleString = "관광지 화면"
-            self.navigationController?.modalPresentationStyle = .fullScreen
-            present(vc, animated: true)
+            let vc = sb.instantiateViewController(withIdentifier: CityInfoDetailViewController.identifier) as! CityInfoDetailViewController
+            
+            vc.cityInfoData = data
+            
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
     
@@ -68,6 +71,7 @@ extension CityInfoViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: CityInfoTableViewCell.identifier, for: indexPath) as! CityInfoTableViewCell
             cell.configureCell(data: data, row: indexPath.row)
             return cell
+            
         }
     }
 }
@@ -76,5 +80,13 @@ extension CityInfoViewController: ViewControllerDelegate {
 
     func applyData(row: Int) {
         cityInfoTableView.reloadRows(at: [IndexPath(row: row, section: 0)], with: .automatic)
+    }
+    
+    func applyData(row: Int, saveCount: Int, isSelected: Bool) {
+        popularCityList[row].save = saveCount
+        popularCityList[row].like = isSelected
+        
+        cityInfoTableView.reloadRows(at: [IndexPath(row: row, section: 0)], with: .automatic)
+
     }
 }
