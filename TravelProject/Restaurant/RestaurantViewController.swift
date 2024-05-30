@@ -57,7 +57,6 @@ class RestaurantViewController: UIViewController {
     }
 }
 
-
 // MARK: - tableView
 extension RestaurantViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -67,7 +66,7 @@ extension RestaurantViewController: UITableViewDelegate, UITableViewDataSource {
         restaurantTableView.delegate = self
         restaurantTableView.dataSource = self
         
-        registerCell(id: "RestaurantTableViewCell")
+        registerCell(id: RestaurantTableViewCell.identifier)
     }
     
     func registerCell(id: String) {
@@ -94,7 +93,7 @@ extension RestaurantViewController: UITableViewDelegate, UITableViewDataSource {
 //        let nonFilteredData = restaurantList[indexPath.row]
 //        let data = filteredList[indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantTableViewCell", for: indexPath) as! RestaurantTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantTableViewCell.identifier, for: indexPath) as! RestaurantTableViewCell
         
 //        filteredList = restaurantList.filter { $0.category == selectedCategory }
         if selectedCategory == "전체" {

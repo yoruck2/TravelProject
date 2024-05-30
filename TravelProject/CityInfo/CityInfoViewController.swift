@@ -22,8 +22,8 @@ class CityInfoViewController: UIViewController {
         cityInfoTableView.rowHeight = UITableView.automaticDimension
         cityInfoTableView.delegate = self
         cityInfoTableView.dataSource = self
-        registerCell(id: "CityInfoTableViewCell")
-        registerCell(id: "AdTableViewCell")
+        registerCell(id: CityInfoTableViewCell.identifier)
+        registerCell(id: AdTableViewCell.identifier)
     }
     
     func registerCell(id: String) {
@@ -43,13 +43,13 @@ extension CityInfoViewController: UITableViewDelegate, UITableViewDataSource {
         
         if data.ad {
             let sb = UIStoryboard(name: "Main", bundle: nil)
-            let vc = sb.instantiateViewController(withIdentifier: "TravelingSpotViewController") as! TravelingSpotViewController
+            let vc = sb.instantiateViewController(withIdentifier: TravelingSpotViewController.identifier) as! TravelingSpotViewController
             vc.titleString = "광고 화면"
             navigationController?.pushViewController(vc, animated: true)
      
         } else {
             let sb = UIStoryboard(name: "Main", bundle: nil)
-            let vc = sb.instantiateViewController(withIdentifier: "TravelingSpotViewController") as! TravelingSpotViewController
+            let vc = sb.instantiateViewController(withIdentifier: TravelingSpotViewController.identifier) as! TravelingSpotViewController
             vc.titleString = "관광지 화면"
             self.navigationController?.modalPresentationStyle = .fullScreen
             present(vc, animated: true)
@@ -61,11 +61,11 @@ extension CityInfoViewController: UITableViewDelegate, UITableViewDataSource {
         let data = popularCityList[indexPath.row]
         
         if data.ad {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "AdTableViewCell", for: indexPath) as! AdTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: AdTableViewCell.identifier, for: indexPath) as! AdTableViewCell
             cell.configureCell(data: data)
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CityInfoTableViewCell", for: indexPath) as! CityInfoTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: CityInfoTableViewCell.identifier, for: indexPath) as! CityInfoTableViewCell
             cell.configureCell(data: data, row: indexPath.row)
             return cell
         }
