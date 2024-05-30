@@ -27,7 +27,7 @@ class CategoryPickerViewController: UIViewController, UIPickerViewDelegate, UIPi
     
     func setUpPickerViewLabel() {
         pickerViewLabel.text = "선택한 카테고리만 보이게되요"
-        pickerViewLabel.font = .boldSystemFont(ofSize: 15)
+        pickerViewLabel.font = UIFont.cellSmall
     }
     
     func setUpConfirmButton() {

@@ -31,7 +31,7 @@ extension TravelTableViewController {
         return magazineInfo.count
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        462
+        460
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

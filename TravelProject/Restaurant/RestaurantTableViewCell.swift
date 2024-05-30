@@ -42,14 +42,12 @@ class RestaurantTableViewCell: UITableViewCell {
     }
     
     func configureLayout() {
-        nameLabel?.font = .boldSystemFont(ofSize: 17)
-        contactLabel?.font = .systemFont(ofSize: 13)
+        nameLabel?.font = UIFont.cellLarge
+        contactLabel?.font = UIFont.cellSmall
         contactLabel?.textColor = .darkGray
-        adressLabel?.font = .boldSystemFont(ofSize: 13)
+        adressLabel?.font = UIFont.cellSmall
         restaurantImage.layer.cornerRadius = 15
-        
         categoryLabel.layer.cornerRadius = 16
-//        categoryLabel.backgroundColor = #colorLiteral(red: 0.1098039216, green: 0.7294117647, blue: 0.9764705882, alpha: 1)
         categoryLabel.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     }
     

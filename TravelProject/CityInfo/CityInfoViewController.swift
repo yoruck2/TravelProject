@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CityInfoViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CityInfoViewController: UIViewController {
     
     let popularCityList = TravelInfo.travel
     
@@ -30,6 +30,9 @@ class CityInfoViewController: UIViewController, UITableViewDelegate, UITableView
         let nib = UINib(nibName: id, bundle: nil)
         cityInfoTableView.register(nib, forCellReuseIdentifier: id)
     }
+}
+
+extension CityInfoViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         popularCityList.count

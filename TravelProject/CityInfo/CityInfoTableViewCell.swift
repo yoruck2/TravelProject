@@ -44,10 +44,10 @@ class CityInfoTableViewCell: UITableViewCell {
     }
     
     func configureLayout() {
-        spotNameLabel?.font = .boldSystemFont(ofSize: 17)
-        descriptionLabel?.font = .systemFont(ofSize: 15)
+        spotNameLabel?.font = UIFont.cellLarge
+        descriptionLabel?.font = UIFont.cellMedium
         descriptionLabel?.textColor = .darkGray
-        saveLabel?.font = .boldSystemFont(ofSize: 13)
+        saveLabel?.font = UIFont.cellSmall
         saveLabel?.textColor = .gray
         cellImage.layer.cornerRadius = 10
         cellImage.contentMode = .scaleAspectFill

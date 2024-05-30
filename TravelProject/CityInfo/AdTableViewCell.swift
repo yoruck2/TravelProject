@@ -28,7 +28,7 @@ class AdTableViewCell: UITableViewCell {
     
     func configureLayout() {
         adContentLabel.textAlignment = .center
-        adContentLabel.font = .boldSystemFont(ofSize: 20)
+        adContentLabel.font = UIFont.ad
         adContentLabel.numberOfLines = 0
         
         adbadgeLabel.text = "AD"
