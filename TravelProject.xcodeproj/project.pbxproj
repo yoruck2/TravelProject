@@ -21,6 +21,8 @@
 		840D5B312C05ECCF00308BB1 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840D5B302C05ECCF00308BB1 /* UIColor+.swift */; };
 		8414D2662C063CA500B7DE55 /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414D2652C063CA500B7DE55 /* CategoryPickerViewController.swift */; };
 		8414D2682C067B7200B7DE55 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8414D2672C067B7200B7DE55 /* Category.swift */; };
+		8419BBC02C09F51900216272 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8419BBBF2C09F51900216272 /* MapViewController.swift */; };
+		8419BBC22C0A402300216272 /* UIAlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8419BBC12C0A402300216272 /* UIAlertController+.swift */; };
 		8462F6C72C073E58004CC40D /* CityInfoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462F6C62C073E58004CC40D /* CityInfoDetailViewController.swift */; };
 		8462F6CB2C074D2E004CC40D /* CityInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462F6CA2C074D2E004CC40D /* CityInfo.swift */; };
 		8462F6CD2C0766CA004CC40D /* ViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462F6CC2C0766CA004CC40D /* ViewControllerDelegate.swift */; };
@@ -57,6 +59,8 @@
 		840D5B302C05ECCF00308BB1 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		8414D2652C063CA500B7DE55 /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
 		8414D2672C067B7200B7DE55 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		8419BBBF2C09F51900216272 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		8419BBC12C0A402300216272 /* UIAlertController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+.swift"; sourceTree = "<group>"; };
 		8462F6C62C073E58004CC40D /* CityInfoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoDetailViewController.swift; sourceTree = "<group>"; };
 		8462F6CA2C074D2E004CC40D /* CityInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CityInfo.swift; path = TravelProject/Model/CityInfo.swift; sourceTree = SOURCE_ROOT; };
 		8462F6CC2C0766CA004CC40D /* ViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 				840D5AD72C04E27C00308BB1 /* RestaurantTableViewCell.xib */,
 				8414D2652C063CA500B7DE55 /* CategoryPickerViewController.swift */,
 				8414D2672C067B7200B7DE55 /* Category.swift */,
+				8419BBBF2C09F51900216272 /* MapViewController.swift */,
 			);
 			path = Restaurant;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 				840D5B302C05ECCF00308BB1 /* UIColor+.swift */,
 				8462F6DB2C089596004CC40D /* UIFont+.swift */,
 				84B4CAAB2C05F64D0075DA21 /* Int+.swift */,
+				8419BBC12C0A402300216272 /* UIAlertController+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -315,6 +321,8 @@
 				84A9F0882C0397E0007025E4 /* DateFormatter+.swift in Sources */,
 				840D5ADB2C04F43200308BB1 /* TravelModel.swift in Sources */,
 				84B4CAAC2C05F64D0075DA21 /* Int+.swift in Sources */,
+				8419BBC22C0A402300216272 /* UIAlertController+.swift in Sources */,
+				8419BBC02C09F51900216272 /* MapViewController.swift in Sources */,
 				840D5B2D2C05E9BC00308BB1 /* UITableViewCell+.swift in Sources */,
 				840D5B282C05DD5800308BB1 /* AdTableViewCell.swift in Sources */,
 				840D5AD82C04E27C00308BB1 /* RestaurantTableViewCell.swift in Sources */,
