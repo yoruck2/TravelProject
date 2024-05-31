@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum Category: String {
+enum Category: String, CaseIterable {
     case korean = "한식"
     case cafe = "카페"
     case chinese = "중식"

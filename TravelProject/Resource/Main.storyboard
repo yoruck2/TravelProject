@@ -5,6 +5,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -181,7 +182,13 @@
                             <constraint firstItem="ldN-AE-9BX" firstAttribute="trailing" secondItem="fki-cK-jmC" secondAttribute="trailing" id="ki5-vp-Bf8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="SeSAC Restaurant" id="Iyo-tM-Hin"/>
+                    <navigationItem key="navigationItem" title="SeSAC Restaurant" id="Iyo-tM-Hin">
+                        <barButtonItem key="rightBarButtonItem" title="지도 보기" id="e3K-g1-PEQ">
+                            <connections>
+                                <action selector="mapButtonTapped:" destination="Mue-pJ-6L1" id="yY0-wS-YaO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="favoriteButton" destination="hJ7-aj-F7h" id="RPT-Ce-Kkj"/>
                         <outlet property="restaurantTableView" destination="ldN-AE-9BX" id="P8t-8J-geA"/>
@@ -191,6 +198,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nvW-ss-u1a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-663.35877862595419" y="-202.11267605633805"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="Ssr-cF-sfA">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="Lbl-Ng-nWd" customClass="MapViewController" customModule="TravelProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dvU-IP-JzW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DR8-Eg-brf">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="q8P-Om-Yf1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DR8-Eg-brf" firstAttribute="leading" secondItem="q8P-Om-Yf1" secondAttribute="leading" id="R4m-JC-6ha"/>
+                            <constraint firstItem="DR8-Eg-brf" firstAttribute="trailing" secondItem="q8P-Om-Yf1" secondAttribute="trailing" id="qbz-lp-kxJ"/>
+                            <constraint firstItem="DR8-Eg-brf" firstAttribute="bottom" secondItem="q8P-Om-Yf1" secondAttribute="bottom" id="rns-6w-vbS"/>
+                            <constraint firstItem="DR8-Eg-brf" firstAttribute="top" secondItem="q8P-Om-Yf1" secondAttribute="top" id="wjI-uN-KKQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="5Yi-md-Fjn">
+                        <barButtonItem key="backBarButtonItem" title="asd" id="F3f-xY-N1n"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="restaurantMapView" destination="DR8-Eg-brf" id="9Pc-V2-Xgf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gs9-Qe-ixR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="962.59541984732823" y="-202.11267605633805"/>
         </scene>
         <!--Category Picker View Controller-->
         <scene sceneID="sSL-Qm-Edx">
@@ -401,9 +441,9 @@
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1o7-sg-uJT">
                                 <rect key="frame" x="10" y="495" width="373" height="313"/>
-                                <mutableString key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend quis ex ut rhoncus. Cras venenatis, nisl ut venenatis elementum, ex dui suscipit sem, quis rutrum erat arcu eleifend mi. Integer in sodales mi. Fusce vel felis justo. Sed scelerisque pulvinar mi a viverra. Curabitur eu lorem ut sapien convallis commodo non in arcu. Ut lacus quam, semper quis nisl vitae, faucibus viverra sapien. Etiam efficitur massa orci, et tempus nunc varius eu. Donec vel lacinia lectus. Nunc bibendum tellus a purus molestie auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sollicitudin at dui non cursus.
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend quis ex ut rhoncus. Cras venenatis, nisl ut venenatis elementum, ex dui suscipit sem, quis rutrum erat arcu eleifend mi. Integer in sodales mi. Fusce vel felis justo. Sed scelerisque pulvinar mi a viverra. Curabitur eu lorem ut sapien convallis commodo non in arcu. Ut lacus quam, semper quis nisl vitae, faucibus viverra sapien. Etiam efficitur massa orci, et tempus nunc varius eu. Donec vel lacinia lectus. Nunc bibendum tellus a purus molestie auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sollicitudin at dui non cursus.
 
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

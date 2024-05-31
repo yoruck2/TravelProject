@@ -12,7 +12,7 @@ import SafariServices
 class TravelTableViewController: UITableViewController {
 
     var magazineInfo = MagazineInfo().magazine
-    var restaurant = RestaurantList().restaurantArray
+    var restaurant = RestaurantList.restaurantArray
     
     override func viewDidLoad() {
         super.viewDidLoad()

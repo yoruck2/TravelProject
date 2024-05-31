@@ -9,7 +9,7 @@ import UIKit
 
 class RestaurantViewController: UIViewController {
     
-    let restaurantList = RestaurantList().restaurantArray
+    let restaurantList = RestaurantList.restaurantArray
     var filteredList: [Restaurant] = []
     
     
@@ -38,6 +38,19 @@ class RestaurantViewController: UIViewController {
         filteredList = restaurantList
         
     }
+    
+    @IBAction func mapButtonTapped(_ sender: UIBarButtonItem) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+        navigationController?.pushViewController(vc, animated: true)
+        
+        let backBarButtonItem = UIBarButtonItem(title: "뒤로가기", style: .plain, target: self, action: nil)
+        
+            self.navigationItem.backBarButtonItem = backBarButtonItem
+        
+    }
+    
+    
+    
     @IBAction func favoriteButtonTapped(_ sender: UIButton) {
         
     }
