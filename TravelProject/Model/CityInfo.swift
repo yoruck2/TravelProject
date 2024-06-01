@@ -19,7 +19,7 @@ struct City {
 }
  
 struct CityInfo {
-    let city: [City] = [
+    static let city: [City] = [
         City(city_name: "방콕", 
              city_english_name: "Bangkok",
              city_explain: "방콕, 파타야, 후아힌, 코사멧, 코사무이",

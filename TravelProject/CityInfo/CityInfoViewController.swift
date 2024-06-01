@@ -18,6 +18,11 @@ class CityInfoViewController: UIViewController {
         configuretableView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        print(#function)
+        cityInfoTableView.reloadData()
+    }
+    
     func configuretableView() {
         cityInfoTableView.rowHeight = UITableView.automaticDimension
         cityInfoTableView.delegate = self
@@ -44,11 +49,10 @@ extension CityInfoViewController: UITableViewDelegate, UITableViewDataSource {
         if data.ad {
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let vc = sb.instantiateViewController(withIdentifier: AdViewController.identifier) as! AdViewController
-            vc.titleString = "광고 화면"
+            vc.titleString = data.title
             self.navigationController?.modalPresentationStyle = .fullScreen
             present(vc, animated: true)
-            
-     
+
         } else {
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let vc = sb.instantiateViewController(withIdentifier: CityInfoDetailViewController.identifier) as! CityInfoDetailViewController
@@ -63,12 +67,16 @@ extension CityInfoViewController: UITableViewDelegate, UITableViewDataSource {
         
         let data = popularCityList[indexPath.row]
         
+        print(popularCityList[indexPath.row].like ?? "광고")
+        
         if data.ad {
-            let cell = tableView.dequeueReusableCell(withIdentifier: AdTableViewCell.identifier, for: indexPath) as! AdTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: AdTableViewCell.identifier, 
+                                                     for: indexPath) as! AdTableViewCell
             cell.configureCell(data: data)
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: CityInfoTableViewCell.identifier, for: indexPath) as! CityInfoTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: CityInfoTableViewCell.identifier, 
+                                                     for: indexPath) as! CityInfoTableViewCell
             cell.configureCell(data: data, row: indexPath.row)
             return cell
             
@@ -77,16 +85,10 @@ extension CityInfoViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension CityInfoViewController: ViewControllerDelegate {
-
-    func applyData(row: Int) {
-        cityInfoTableView.reloadRows(at: [IndexPath(row: row, section: 0)], with: .automatic)
-    }
-    
     func applyData(row: Int, saveCount: Int, isSelected: Bool) {
         popularCityList[row].save = saveCount
         popularCityList[row].like = isSelected
-        
-        cityInfoTableView.reloadRows(at: [IndexPath(row: row, section: 0)], with: .automatic)
-
+        print("어쨰서?")
+        print(#function)
     }
 }
