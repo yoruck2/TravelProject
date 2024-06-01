@@ -305,11 +305,11 @@
             </objects>
             <point key="canvasLocation" x="-1570" y="705"/>
         </scene>
-        <!--Item-->
+        <!--인기 도시-->
         <scene sceneID="239-8P-vO2">
             <objects>
                 <navigationController id="UtW-aq-c3k" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="DY8-cK-STV"/>
+                    <tabBarItem key="tabBarItem" title="인기 도시" image="map" catalog="system" selectedImage="map.fill" id="DY8-cK-STV"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pc7-4y-kjS">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -322,42 +322,52 @@
             </objects>
             <point key="canvasLocation" x="-2430" y="1530"/>
         </scene>
-        <!--View Controller-->
+        <!--인기 도시-->
         <scene sceneID="IoV-Hx-KuN">
             <objects>
-                <viewController id="3Vo-Fc-cfn" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PopularCityViewController" id="3Vo-Fc-cfn" customClass="PopularCityViewController" customModule="TravelProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z3b-Wa-RGQ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iZf-Ou-yRo">
-                                <rect key="frame" x="131" y="52" width="131" height="32"/>
-                                <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                </segments>
-                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="adn-zv-XDN">
-                                <rect key="frame" x="0.0" y="83" width="393" height="686"/>
+                                <rect key="frame" x="0.0" y="147" width="393" height="622"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" id="7BX-d3-ICo">
+                                <rect key="frame" x="0.0" y="103" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="iZf-Ou-yRo">
+                                        <rect key="frame" x="32" y="6" width="326" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HLa-qp-vo3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="HLa-qp-vo3" firstAttribute="bottom" secondItem="adn-zv-XDN" secondAttribute="bottom" id="Amn-NL-DQw"/>
+                            <constraint firstItem="adn-zv-XDN" firstAttribute="top" secondItem="7BX-d3-ICo" secondAttribute="bottom" id="Irh-Ba-tqa"/>
                             <constraint firstItem="HLa-qp-vo3" firstAttribute="trailing" secondItem="adn-zv-XDN" secondAttribute="trailing" id="QIw-xm-5jA"/>
-                            <constraint firstItem="adn-zv-XDN" firstAttribute="top" secondItem="iZf-Ou-yRo" secondAttribute="bottom" id="T8C-ik-3Hz"/>
                             <constraint firstItem="adn-zv-XDN" firstAttribute="leading" secondItem="HLa-qp-vo3" secondAttribute="leading" id="c8R-wz-ViJ"/>
-                            <constraint firstItem="adn-zv-XDN" firstAttribute="centerY" secondItem="z3b-Wa-RGQ" secondAttribute="centerY" id="sxm-0H-sBO"/>
-                            <constraint firstItem="adn-zv-XDN" firstAttribute="centerX" secondItem="z3b-Wa-RGQ" secondAttribute="centerX" id="vJ9-3L-Ce6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="BUl-qQ-gqk"/>
+                    <navigationItem key="navigationItem" title="인기 도시" id="BUl-qQ-gqk"/>
+                    <connections>
+                        <outlet property="filteringSegment" destination="iZf-Ou-yRo" id="HoL-5Z-3K8"/>
+                        <outlet property="popularCityTableView" destination="adn-zv-XDN" id="g61-xa-Bd9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VnD-2U-9vc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1523" y="1530"/>
+            <point key="canvasLocation" x="-1524.4274809160304" y="1529.5774647887324"/>
         </scene>
         <!--도시 상세 정보-->
         <scene sceneID="UvL-Lm-KhI">
@@ -419,6 +429,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="31"/>
+                                    <color key="baseForegroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="heartButtonTapped:" destination="Ncx-yZ-js0" eventType="touchUpInside" id="FCG-rS-1zT"/>
@@ -580,6 +591,8 @@
         <image name="line.horizontal.3" catalog="system" width="128" height="65"/>
         <image name="magazine" catalog="system" width="110" height="128"/>
         <image name="magazine.fill" catalog="system" width="110" height="128"/>
+        <image name="map" catalog="system" width="128" height="112"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="secondaryLabelColor">

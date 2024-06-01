@@ -210,6 +210,7 @@ extension RestaurantViewController: UISearchResultsUpdating {
 // MARK: - 뷰컨 delegate
 extension RestaurantViewController: ViewControllerDelegate {
     func dismissViewController(data: String) {
+        print(#function)
        selectedCategory = data
         restaurantTableView.reloadData()
     }
