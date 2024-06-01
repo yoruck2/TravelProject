@@ -22,8 +22,6 @@ class AdTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        
     }
     
     func configureLayout() {
@@ -36,7 +34,7 @@ class AdTableViewCell: UITableViewCell {
         adbadgeLabel.textAlignment = .center
         backgroundColor = UIColor().RandomColor()
         
-        self.selectionStyle = .none
+        selectionStyle = .none
     }
     
     func configureCell(data: Travel) {

@@ -23,7 +23,6 @@ class CityInfoDetailViewController: UIViewController {
     @IBOutlet var heartButton: UIButton!
     @IBOutlet var descriptionLabel: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpViewcontroller()
@@ -39,7 +38,6 @@ class CityInfoDetailViewController: UIViewController {
             saveCount -= 1
             saveCountLabel.text = saveCount.formatThirdComma
         }
-        
         delegate?.applyData?(row: cellRow, saveCount: saveCount, isSelected: heartButton.isSelected)
     }
     
@@ -73,3 +71,12 @@ class CityInfoDetailViewController: UIViewController {
         heartButton.setImage(UIImage(systemName: "heart.fill"), for: .selected)
     }
 }
+
+//extension CityInfoDetailViewController: ViewControllerDelegate {
+//    func applyData(row: Int, saveCount: Int, isSelected: Bool) {
+//        cityInfoData?.save = saveCount
+//        cityInfoData?.like = isSelected
+//        print(#function)
+//    }
+//}
+

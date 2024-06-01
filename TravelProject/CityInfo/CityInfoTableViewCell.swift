@@ -19,6 +19,7 @@ class CityInfoTableViewCell: UITableViewCell {
     @IBOutlet var heartButton: UIButton!
     
     weak var delegate: ViewControllerDelegate?
+    
     var cellRow: Int = 0
     var saveCount: Int = 0
     
@@ -39,7 +40,8 @@ class CityInfoTableViewCell: UITableViewCell {
         }
         
         // MARK: - 셀의 변경사항을 뷰컨트롤러가 가진 tableView를 업데이트 시켜주기 위해 델리게이트를 통한 업데이트 할 셀의 row 전달
-        delegate?.applyData?(row: cellRow)
+        // MARK: - 인줄 알았는데 아니었다??!?!?! 주석 처리 해도 테이블뷰 셀에 반영이 된다..
+        delegate?.applyData?(row: cellRow, saveCount: saveCount, isSelected: heartButton.isSelected)
     }
     
     func configureLayout() {

@@ -24,6 +24,7 @@ class AdViewController: UIViewController {
         adLabel?.text = titleString
         adLabel?.font = .systemFont(ofSize: 30, weight: .semibold)
         adLabel?.textColor = .black
+        adLabel?.numberOfLines = 0
         navigationItem.title = titleString
     }
     

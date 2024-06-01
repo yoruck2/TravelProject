@@ -28,20 +28,19 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3K-Io-bPA">
-                        <rect key="frame" x="69.333333333333343" y="15" width="299.33333333333326" height="70"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="Z3K-Io-bPA" secondAttribute="height" multiplier="291:68" id="sLi-ZQ-lDU"/>
-                        </constraints>
+                        <rect key="frame" x="50" y="15" width="338" height="70"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Z3K-Io-bPA" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="1go-ti-BGd"/>
+                    <constraint firstAttribute="trailing" secondItem="Z3K-Io-bPA" secondAttribute="trailing" constant="50" id="0am-69-B9j"/>
+                    <constraint firstItem="Z3K-Io-bPA" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="2b2-JC-pY4"/>
+                    <constraint firstItem="Z3K-Io-bPA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="AZh-ME-TgE"/>
                     <constraint firstItem="Z3K-Io-bPA" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.7" id="FdX-r7-KS1"/>
+                    <constraint firstItem="Z3K-Io-bPA" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="FoQ-Zb-XfL"/>
                     <constraint firstAttribute="trailing" secondItem="nh9-M7-e3l" secondAttribute="trailing" constant="5" id="K5Y-5U-Ziz"/>
-                    <constraint firstItem="Z3K-Io-bPA" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="kHS-Nj-OMJ"/>
                     <constraint firstItem="nh9-M7-e3l" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="yIc-Mm-V6q"/>
                 </constraints>
             </tableViewCellContentView>
