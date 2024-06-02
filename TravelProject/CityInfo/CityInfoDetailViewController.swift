@@ -30,15 +30,15 @@ class CityInfoDetailViewController: UIViewController {
     }
     
     @IBAction func heartButtonTapped(_ sender: UIButton) {
-        heartButton.isSelected.toggle()
-        if heartButton.isSelected == true {
+        sender.isSelected.toggle()
+        if sender.isSelected == true {
             saveCount += 1
             saveCountLabel.text = saveCount.formatThirdComma
         } else {
             saveCount -= 1
             saveCountLabel.text = saveCount.formatThirdComma
         }
-        delegate?.applyData?(row: cellRow, saveCount: saveCount, isSelected: heartButton.isSelected)
+        delegate?.applyData?(row: cellRow, saveCount: saveCount, isSelected: sender.isSelected)
     }
     
     func configureRatingLabel() {

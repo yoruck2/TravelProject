@@ -27,13 +27,8 @@ class CityInfoViewController: UIViewController {
         cityInfoTableView.rowHeight = UITableView.automaticDimension
         cityInfoTableView.delegate = self
         cityInfoTableView.dataSource = self
-        registerCell(id: CityInfoTableViewCell.identifier)
-        registerCell(id: AdTableViewCell.identifier)
-    }
-    
-    func registerCell(id: String) {
-        let nib = UINib(nibName: id, bundle: nil)
-        cityInfoTableView.register(nib, forCellReuseIdentifier: id)
+        registerCell(to: cityInfoTableView, cellId: CityInfoTableViewCell.identifier)
+        registerCell(to: cityInfoTableView, cellId: AdTableViewCell.identifier)
     }
 }
 
@@ -79,7 +74,6 @@ extension CityInfoViewController: UITableViewDelegate, UITableViewDataSource {
                                                      for: indexPath) as! CityInfoTableViewCell
             cell.configureCell(data: data, row: indexPath.row)
             return cell
-            
         }
     }
 }
@@ -90,5 +84,6 @@ extension CityInfoViewController: ViewControllerDelegate {
         popularCityList[row].like = isSelected
         print("어쨰서?")
         print(#function)
+        cityInfoTableView.reloadData()
     }
 }
