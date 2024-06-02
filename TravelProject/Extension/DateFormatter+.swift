@@ -8,6 +8,7 @@
 import Foundation
 
 extension DateFormatter {
+    
     func formatKoreanDate(inputDate: String) -> String? {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyMMdd"
