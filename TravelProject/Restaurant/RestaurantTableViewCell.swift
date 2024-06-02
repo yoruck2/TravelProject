@@ -10,6 +10,8 @@ import Kingfisher
 
 class RestaurantTableViewCell: UITableViewCell {
 
+    var heartSelected: Bool = false
+    
     @IBOutlet var restaurantImage: UIImageView!
     
     @IBOutlet var nameLabel: UILabel!
@@ -23,16 +25,16 @@ class RestaurantTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         configureLayout()
-        setUpCheckButton()
+        setUpHeartButton()
+        print("awake cell")
         
     }
     @IBAction func heartButtonTapped(_ sender: UIButton) {
         sender.isSelected.toggle()
-//        travelInfo[sender.tag].like?.toggle()
-//        travelTableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .none)
+        heartSelected.toggle()
     }
     
-    func setUpCheckButton() {
+    func setUpHeartButton() {
         var buttonConfiguration = UIButton.Configuration.plain()
         buttonConfiguration.imagePadding = 8
         heartButton.setImage(UIImage(systemName: "heart"), for: .normal)
