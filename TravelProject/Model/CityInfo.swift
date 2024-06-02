@@ -8,7 +8,7 @@ import Foundation
 
 
 
-struct City {
+struct City: Hashable {
     
     var city_name: String
     var city_english_name: String
