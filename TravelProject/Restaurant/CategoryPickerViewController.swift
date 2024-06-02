@@ -11,6 +11,7 @@ class CategoryPickerViewController: UIViewController, UIPickerViewDelegate, UIPi
     
     let category = ["전체", "한식", "카페", "중식", "분식", "일식", "양식", "경양식"]
     var selectedCategory: String = "전체"
+    var selectedCategoryColor: UIColor = #colorLiteral(red: 0, green: 0.1491314173, blue: 0, alpha: 1)
     weak var delegate: ViewControllerDelegate?
     
     @IBOutlet var pickerViewLabel: UILabel!
@@ -25,22 +26,20 @@ class CategoryPickerViewController: UIViewController, UIPickerViewDelegate, UIPi
         categoryPicker.dataSource = self
     }
     
-    
     func setUpPickerViewLabel() {
         pickerViewLabel.text = "선택한 카테고리만 보이게되요"
-        pickerViewLabel.font = .boldSystemFont(ofSize: 15)
+        pickerViewLabel.font = UIFont.cellSmall
     }
     
     func setUpConfirmButton() {
         confirmButton.setTitle("확인", for: .normal)
         confirmButton.layer.cornerRadius = 10
-//        confirmButton.layer.masksToBounds = true
         confirmButton.backgroundColor = .lightGray
 
     }
 
     @IBAction func confirmButtonTapped(_ sender: UIButton) {
-        delegate?.dismissViewController(data: selectedCategory)
+        delegate?.dismissViewController?(label: selectedCategory, color: selectedCategoryColor)
         dismiss(animated: true)
     }
 
@@ -49,15 +48,18 @@ class CategoryPickerViewController: UIViewController, UIPickerViewDelegate, UIPi
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return category.count
+        return Category.categoryList.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-           return category[row]
+           return Category.categoryList[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedCategory = category[row]
+        
+        selectedCategory = Category.categoryList[row]
+        selectedCategoryColor = Category(rawValue: selectedCategory)?.categoryColor() ?? UIColor(.gray)
+        
     }
     
     

@@ -22,13 +22,11 @@ class AdTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        
     }
     
     func configureLayout() {
         adContentLabel.textAlignment = .center
-        adContentLabel.font = .boldSystemFont(ofSize: 20)
+        adContentLabel.font = UIFont.ad
         adContentLabel.numberOfLines = 0
         
         adbadgeLabel.text = "AD"
@@ -36,7 +34,7 @@ class AdTableViewCell: UITableViewCell {
         adbadgeLabel.textAlignment = .center
         backgroundColor = UIColor().RandomColor()
         
-        self.selectionStyle = .none
+        selectionStyle = .none
     }
     
     func configureCell(data: Travel) {

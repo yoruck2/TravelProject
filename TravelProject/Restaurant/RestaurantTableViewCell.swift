@@ -10,6 +10,8 @@ import Kingfisher
 
 class RestaurantTableViewCell: UITableViewCell {
 
+    var heartSelected: Bool = false
+    
     @IBOutlet var restaurantImage: UIImageView!
     
     @IBOutlet var nameLabel: UILabel!
@@ -23,15 +25,16 @@ class RestaurantTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         configureLayout()
+        setUpHeartButton()
+        print("awake cell")
         
     }
     @IBAction func heartButtonTapped(_ sender: UIButton) {
         sender.isSelected.toggle()
-//        travelInfo[sender.tag].like?.toggle()
-//        travelTableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .none)
+        heartSelected.toggle()
     }
     
-    func setUpCheckButton() {
+    func setUpHeartButton() {
         var buttonConfiguration = UIButton.Configuration.plain()
         buttonConfiguration.imagePadding = 8
         heartButton.setImage(UIImage(systemName: "heart"), for: .normal)
@@ -41,14 +44,12 @@ class RestaurantTableViewCell: UITableViewCell {
     }
     
     func configureLayout() {
-        nameLabel?.font = .boldSystemFont(ofSize: 17)
-        contactLabel?.font = .systemFont(ofSize: 13)
+        nameLabel?.font = UIFont.cellLarge
+        contactLabel?.font = UIFont.cellSmall
         contactLabel?.textColor = .darkGray
-        adressLabel?.font = .boldSystemFont(ofSize: 13)
+        adressLabel?.font = UIFont.cellSmall
         restaurantImage.layer.cornerRadius = 15
-        
         categoryLabel.layer.cornerRadius = 16
-//        categoryLabel.backgroundColor = #colorLiteral(red: 0.1098039216, green: 0.7294117647, blue: 0.9764705882, alpha: 1)
         categoryLabel.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     }
     
