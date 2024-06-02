@@ -47,6 +47,7 @@ class PopularCityTableViewCell: UITableViewCell {
     }
     
     func configureShadow() {
+        
         contentView.layer.shadowOpacity = 0.4
         contentView.layer.shadowRadius = 4
         contentView.layer.shadowOffset = .init(width: 5, height: 5)

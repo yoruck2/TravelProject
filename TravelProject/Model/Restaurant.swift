@@ -26,7 +26,7 @@ struct RestaurantList {
             image: "https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20170712_44%2F1499829806371zeBdS_JPEG%2FIMG_1167.jpg",
             latitude: 37.514746,
             longitude: 126.898935,
-            name: "24시전주명가콩나물국밥 문래점",
+            name: "24시 전주명가콩나물국밥 문래점",
             address: "서울 영등포구 선유로 33 문래대림아파트",
             phoneNumber: "02-2677-6339",
             category: "한식",

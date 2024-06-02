@@ -11,11 +11,20 @@ import UIKit
 class PopularCityViewController: UIViewController {
     
     let cityInfoList = CityInfo.city
+    var searchedList = CityInfo.city
+    
     var filteredList: [City] = [] {
         didSet {
             popularCityTableView.reloadData()
         }
     }
+    var categorizedList = CityInfo.city {
+        didSet {
+            popularCityTableView.reloadData()
+        }
+    }
+    
+    var resultList: Set<City> = Set(CityInfo.city)
     
     @IBOutlet var popularCityTableView: UITableView!
     @IBOutlet var filteringSegment: UISegmentedControl!
@@ -25,6 +34,7 @@ class PopularCityViewController: UIViewController {
         filteredList = cityInfoList
         configureTableView()
         configureFilteringSegment()
+        configureSearchBar()
     }
     
     func configureFilteringSegment() {
@@ -38,11 +48,11 @@ class PopularCityViewController: UIViewController {
     func filterRestaurant() {
         switch filteringSegment.selectedSegmentIndex {
         case 0:
-            filteredList = cityInfoList
+            categorizedList = cityInfoList
         case 1:
-            filteredList = cityInfoList.filter { $0.domestic_travel == true}
+            categorizedList = cityInfoList.filter { $0.domestic_travel == true }
         case 2:
-            filteredList = cityInfoList.filter { $0.domestic_travel == false}
+            categorizedList = cityInfoList.filter { $0.domestic_travel == false }
         default:
             return
         }
@@ -54,22 +64,63 @@ class PopularCityViewController: UIViewController {
         popularCityTableView.rowHeight = 140
         popularCityTableView.separatorStyle = .none
         
-        let xib = UINib(nibName: PopularCityTableViewCell.identifier, bundle: nil)
-        
-        popularCityTableView.register(xib, forCellReuseIdentifier: PopularCityTableViewCell.identifier)
+        registerCell(to: popularCityTableView, cellId: PopularCityTableViewCell.identifier)
     }
 }
 
 extension PopularCityViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        filteredList.count
+        if isFiltering {
+            resultList = Set(categorizedList).intersection(Set(searchedList))
+            return resultList.count
+        } else {
+            return categorizedList.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PopularCityTableViewCell.identifier, 
                                                  for: indexPath) as! PopularCityTableViewCell
-        cell.setUpCellData(data: filteredList[indexPath.row])
-        return cell
+        
+        if isFiltering {
+            cell.setUpCellData(data: Array(resultList)[indexPath.row])
+            return cell
+        } else {
+            cell.setUpCellData(data: categorizedList[indexPath.row])
+            return cell
+        }
+        
     }
 }
 
+extension PopularCityViewController: UISearchResultsUpdating {
+    
+    // MARK: - 서치바 설정
+    func configureSearchBar() {
+        let searchController = UISearchController(searchResultsController: nil)
+        self.navigationItem.searchController = searchController
+        searchController.searchResultsUpdater = self
+    }
+    
+    var isFiltering: Bool {
+        let searchController = self.navigationItem.searchController
+        let isActive = searchController?.isActive ?? false
+        let isSearchBarHasText = searchController?.searchBar.text?.isEmpty == false
+        return isActive && isSearchBarHasText
+        
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text?.lowercased() else {
+            resultList = Set(categorizedList)
+            popularCityTableView.reloadData()
+            return
+        }
+        
+        searchedList = categorizedList.filter {
+            $0.city_name.lowercased().contains(text)
+        }
+        popularCityTableView.reloadData()
+    
+    }
+}
