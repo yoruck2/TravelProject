@@ -11,7 +11,6 @@ import UIKit
 @objc
 protocol ViewControllerDelegate: AnyObject {
     @objc optional func dismissViewController(label: String, color: UIColor)
-//    @objc optional func applyData(row: Int)
     @objc optional func applyData(row: Int, saveCount: Int, isSelected: Bool)
 }
 

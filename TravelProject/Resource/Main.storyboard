@@ -94,7 +94,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWA-he-lSW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-663" y="-952"/>
+            <point key="canvasLocation" x="-663" y="-996"/>
         </scene>
         <!--맛집-->
         <scene sceneID="NhG-LP-UdX">
@@ -135,7 +135,7 @@
                                                     <rect key="frame" x="15.000000000000007" y="5" width="114.66666666666669" height="35"/>
                                                     <color key="tintColor" red="0.19726213179999999" green="0.19726213179999999" blue="0.19726213179999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="filled" image="line.horizontal.3" catalog="system" title=" 카테고리"/>
+                                                    <buttonConfiguration key="configuration" style="filled" image="line.3.horizontal" catalog="system" title=" 카테고리"/>
                                                     <connections>
                                                         <action selector="showCategoryButtonTapped:" destination="Mue-pJ-6L1" eventType="touchUpInside" id="kQi-Pv-NOR"/>
                                                     </connections>
@@ -330,16 +330,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="adn-zv-XDN">
-                                <rect key="frame" x="0.0" y="147" width="393" height="622"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
                             <view contentMode="scaleToFill" id="7BX-d3-ICo">
-                                <rect key="frame" x="0.0" y="103" width="393" height="44"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="iZf-Ou-yRo">
-                                        <rect key="frame" x="32" y="6" width="326" height="32"/>
+                                        <rect key="frame" x="33" y="40" width="326" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <segments>
                                             <segment title="First"/>
@@ -349,6 +345,10 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="adn-zv-XDN">
+                                <rect key="frame" x="0.0" y="183" width="393" height="586"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HLa-qp-vo3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -512,13 +512,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="왜안뜨니" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBv-xt-KRq">
-                                <rect key="frame" x="167" y="416" width="59" height="20.333333333333314"/>
+                                <rect key="frame" x="10" y="416" width="373" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZpS-kZ-CpP">
-                                <rect key="frame" x="155" y="476.33333333333331" width="83" height="35"/>
+                                <rect key="frame" x="155" y="476" width="83" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="뒤로가기"/>
                                 <connections>
@@ -533,6 +533,8 @@
                             <constraint firstItem="ZpS-kZ-CpP" firstAttribute="top" secondItem="yBv-xt-KRq" secondAttribute="bottom" constant="40" id="AMW-cY-BiR"/>
                             <constraint firstItem="yBv-xt-KRq" firstAttribute="centerY" secondItem="dge-nx-PQG" secondAttribute="centerY" id="aNa-c0-fUD"/>
                             <constraint firstItem="ZpS-kZ-CpP" firstAttribute="centerX" secondItem="dge-nx-PQG" secondAttribute="centerX" id="c6u-X2-GCr"/>
+                            <constraint firstItem="pKi-cZ-jZb" firstAttribute="trailing" secondItem="yBv-xt-KRq" secondAttribute="trailing" constant="10" id="cWo-To-YlQ"/>
+                            <constraint firstItem="yBv-xt-KRq" firstAttribute="leading" secondItem="pKi-cZ-jZb" secondAttribute="leading" constant="10" id="kWO-oy-TCa"/>
                         </constraints>
                     </view>
                     <connections>
@@ -579,7 +581,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aCf-1Q-bdb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1570" y="-952"/>
+            <point key="canvasLocation" x="-1570" y="-996"/>
         </scene>
     </scenes>
     <resources>
@@ -588,7 +590,7 @@
         <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="kingfisher-1.jpg" width="250" height="250"/>
         <image name="kingfisher-3.jpg" width="250" height="250"/>
-        <image name="line.horizontal.3" catalog="system" width="128" height="65"/>
+        <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
         <image name="magazine" catalog="system" width="110" height="128"/>
         <image name="magazine.fill" catalog="system" width="110" height="128"/>
         <image name="map" catalog="system" width="128" height="112"/>

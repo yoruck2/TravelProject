@@ -48,6 +48,7 @@ class RestaurantTableViewCell: UITableViewCell {
         contactLabel?.font = UIFont.cellSmall
         contactLabel?.textColor = .darkGray
         adressLabel?.font = UIFont.cellSmall
+        priceLabel.font = UIFont.cellMedium
         restaurantImage.layer.cornerRadius = 15
         categoryLabel.layer.cornerRadius = 16
         categoryLabel.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)

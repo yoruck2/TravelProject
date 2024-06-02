@@ -10,9 +10,9 @@ import UIKit
 class RestaurantViewController: UIViewController {
     
     let restaurantList = RestaurantList.restaurantArray
-    var categorizedList: [Restaurant] = RestaurantList.restaurantArray
-    var searchedList: [Restaurant] = RestaurantList.restaurantArray
-    var resultList: [Restaurant] = RestaurantList.restaurantArray
+    lazy var categorizedList: [Restaurant] = restaurantList
+    lazy var searchedList: [Restaurant] = restaurantList
+    lazy var resultList: [Restaurant] = restaurantList
     var favoriteList: [Restaurant] = []
     
     
@@ -40,6 +40,13 @@ class RestaurantViewController: UIViewController {
         
     }
     
+    func configureTableView() {
+        restaurantTableView.rowHeight = 200
+        restaurantTableView.delegate = self
+        restaurantTableView.dataSource = self
+        registerCell(to: restaurantTableView, cellId: RestaurantTableViewCell.identifier)
+    }
+    
     // MARK: - 지도보기 버튼 tap
     @IBAction func mapButtonTapped(_ sender: UIBarButtonItem) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
@@ -50,16 +57,16 @@ class RestaurantViewController: UIViewController {
         self.navigationItem.backBarButtonItem = backBarButtonItem
         
     }
-
+    
     // MARK: - 카테고리 버튼 tap
     @IBAction func showCategoryButtonTapped(_ sender: Any) {
         
         guard let categoryVC = storyboard?.instantiateViewController(withIdentifier: "categoryVC") as? CategoryPickerViewController else { return }
         if let sheet = categoryVC.sheetPresentationController {
-            sheet.detents = [ .custom(resolver: { context in
+            sheet.detents = [ .custom(resolver: {
+                context in
                 return 280
-            })
-            ]
+            })]
         }
         categoryVC.delegate = self
         present(categoryVC, animated: true)
@@ -74,27 +81,11 @@ class RestaurantViewController: UIViewController {
             favoriteButton.configuration?.baseForegroundColor = .systemBackground
             favoriteButton.configuration?.baseBackgroundColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
         }
-        
     }
 }
 
-
 // MARK: - tableView
 extension RestaurantViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    func configureTableView() {
-        
-        restaurantTableView.rowHeight = 200
-        restaurantTableView.delegate = self
-        restaurantTableView.dataSource = self
-        
-        registerCell(id: RestaurantTableViewCell.identifier)
-    }
-    
-    func registerCell(id: String) {
-        let nib = UINib(nibName: id, bundle: nil)
-        restaurantTableView.register(nib, forCellReuseIdentifier: id)
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -111,9 +102,7 @@ extension RestaurantViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        //        let nonFilteredData = restaurantList[indexPath.row]
-        //        let data = filteredList[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantTableViewCell", for: indexPath) as! RestaurantTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantTableViewCell.identifier, for: indexPath) as! RestaurantTableViewCell
         
         if selectedCategory == "전체" && isFiltering {
             cell.configureCell(data: searchedList[indexPath.row])

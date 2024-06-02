@@ -59,8 +59,5 @@ class CategoryPickerViewController: UIViewController, UIPickerViewDelegate, UIPi
         
         selectedCategory = Category.categoryList[row]
         selectedCategoryColor = Category(rawValue: selectedCategory)?.categoryColor() ?? UIColor(.gray)
-        
     }
-    
-    
 }
