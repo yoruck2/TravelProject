@@ -280,7 +280,7 @@
                     </view>
                     <connections>
                         <outlet property="categoryPicker" destination="e8H-0a-9Cy" id="C7u-Hn-XK3"/>
-                        <outlet property="confirmButton" destination="2vF-zw-iV2" id="t3d-HR-Zqk"/>
+                        <outlet property="confirmButton" destination="2vF-zw-iV2" id="qau-QJ-XLQ"/>
                         <outlet property="pickerViewLabel" destination="FTN-7T-Nr1" id="e2D-gt-qqn"/>
                     </connections>
                 </viewController>

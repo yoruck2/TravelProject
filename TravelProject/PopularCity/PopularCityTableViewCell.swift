@@ -46,14 +46,6 @@ class PopularCityTableViewCell: UITableViewCell {
         backView.layer.masksToBounds = true
     }
     
-    func configureShadow() {
-        
-        contentView.layer.shadowOpacity = 0.4
-        contentView.layer.shadowRadius = 4
-        contentView.layer.shadowOffset = .init(width: 5, height: 5)
-        contentView.layer.masksToBounds = false
-    }
-    
     func setUpCellData(data: City) {
         let image = URL(string: data.city_image)
         backgroundImageView.kf.setImage(with: image)

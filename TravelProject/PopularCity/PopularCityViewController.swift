@@ -100,6 +100,7 @@ extension PopularCityViewController: UISearchResultsUpdating {
         let searchController = UISearchController(searchResultsController: nil)
         self.navigationItem.searchController = searchController
         searchController.searchResultsUpdater = self
+
     }
     
     var isFiltering: Bool {
