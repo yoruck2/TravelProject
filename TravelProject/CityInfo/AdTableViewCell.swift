@@ -12,7 +12,6 @@ class AdTableViewCell: UITableViewCell {
     @IBOutlet var adContentLabel: UILabel!
     @IBOutlet var adbadgeLabel: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         configureLayout()

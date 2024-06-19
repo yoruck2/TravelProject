@@ -197,6 +197,17 @@ struct RestaurantList {
             category: "일식",
             price: 658,
             type: 300
+        ),
+        Restaurant(
+            image: "",
+            latitude: 37.517813,
+            longitude: 126.886467,
+            name: "청년취업사관학교",
+            address: "",
+            phoneNumber: "",
+            category: "잭스페티보다 맛있는 잭's강의",
+            price: 99999,
+            type: 300
         )
     ]
 }

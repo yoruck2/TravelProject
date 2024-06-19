@@ -13,6 +13,7 @@ class AdViewController: UIViewController {
 
     @IBOutlet var backButton: UIButton!
     var titleString: String?
+    var adBackgroundColor: UIColor = .clear
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +21,7 @@ class AdViewController: UIViewController {
     }
     
     func configureAdViewController() {
-        view.backgroundColor = .white
+        view.backgroundColor = adBackgroundColor
         adLabel?.text = titleString
         adLabel?.font = .systemFont(ofSize: 30, weight: .semibold)
         adLabel?.textColor = .black

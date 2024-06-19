@@ -16,6 +16,7 @@ class CityInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configuretableView()
+        hideKeyboardWhenTappedAround()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,10 +45,11 @@ extension CityInfoViewController: UITableViewDelegate, UITableViewDataSource {
         if data.ad {
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let vc = sb.instantiateViewController(withIdentifier: AdViewController.identifier) as! AdViewController
+            
             vc.titleString = data.title
             self.navigationController?.modalPresentationStyle = .fullScreen
             present(vc, animated: true)
-
+            
         } else {
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let vc = sb.instantiateViewController(withIdentifier: CityInfoDetailViewController.identifier) as! CityInfoDetailViewController

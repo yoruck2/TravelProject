@@ -32,6 +32,9 @@
 		8462F6DC2C089596004CC40D /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462F6DB2C089596004CC40D /* UIFont+.swift */; };
 		8462F6DE2C08A02A004CC40D /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462F6DD2C08A02A004CC40D /* UIViewController+.swift */; };
 		8462F6E02C08AD30004CC40D /* AdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8462F6DF2C08AD30004CC40D /* AdViewController.swift */; };
+		8496E75E2C234F98009B9238 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8496E75D2C234F98009B9238 /* SnapKit */; };
+		8496E7602C235CC8009B9238 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8496E75F2C235CC8009B9238 /* UIView+.swift */; };
+		8496E7622C2368DA009B9238 /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8496E7612C2368DA009B9238 /* AlertMessage.swift */; };
 		84A9F04D2C032634007025E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9F04C2C032634007025E4 /* AppDelegate.swift */; };
 		84A9F04F2C032634007025E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9F04E2C032634007025E4 /* SceneDelegate.swift */; };
 		84A9F0512C032634007025E4 /* TravelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9F0502C032634007025E4 /* TravelTableViewController.swift */; };
@@ -72,6 +75,8 @@
 		8462F6DB2C089596004CC40D /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		8462F6DD2C08A02A004CC40D /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		8462F6DF2C08AD30004CC40D /* AdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewController.swift; sourceTree = "<group>"; };
+		8496E75F2C235CC8009B9238 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		8496E7612C2368DA009B9238 /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
 		84A9F0492C032634007025E4 /* TravelProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A9F04C2C032634007025E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84A9F04E2C032634007025E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8496E75E2C234F98009B9238 /* SnapKit in Frameworks */,
 				840D5AE52C055F1500308BB1 /* Cosmos in Frameworks */,
 				84A9F0852C035486007025E4 /* Kingfisher in Frameworks */,
 			);
@@ -119,6 +125,7 @@
 				8414D2652C063CA500B7DE55 /* CategoryPickerViewController.swift */,
 				8414D2672C067B7200B7DE55 /* Category.swift */,
 				8419BBBF2C09F51900216272 /* MapViewController.swift */,
+				8496E7612C2368DA009B9238 /* AlertMessage.swift */,
 			);
 			path = Restaurant;
 			sourceTree = "<group>";
@@ -141,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				8419BBC12C0A402300216272 /* UIAlertController+.swift */,
+				8496E75F2C235CC8009B9238 /* UIView+.swift */,
 				8462F6DD2C08A02A004CC40D /* UIViewController+.swift */,
 				840D5B2C2C05E9BC00308BB1 /* UITableViewCell+.swift */,
 				84A9F0872C0397E0007025E4 /* DateFormatter+.swift */,
@@ -244,6 +252,7 @@
 			packageProductDependencies = (
 				84A9F0842C035486007025E4 /* Kingfisher */,
 				840D5AE42C055F1500308BB1 /* Cosmos */,
+				8496E75D2C234F98009B9238 /* SnapKit */,
 			);
 			productName = TravelProject;
 			productReference = 84A9F0492C032634007025E4 /* TravelProject.app */;
@@ -276,6 +285,7 @@
 			packageReferences = (
 				84A9F0832C035486007025E4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				840D5AE32C055F1500308BB1 /* XCRemoteSwiftPackageReference "Cosmos" */,
+				8496E75C2C234F98009B9238 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 84A9F04A2C032634007025E4 /* Products */;
 			projectDirPath = "";
@@ -323,6 +333,7 @@
 				84A9F04D2C032634007025E4 /* AppDelegate.swift in Sources */,
 				8462F6D02C07A689004CC40D /* PopularCityViewController.swift in Sources */,
 				84A9F04F2C032634007025E4 /* SceneDelegate.swift in Sources */,
+				8496E7622C2368DA009B9238 /* AlertMessage.swift in Sources */,
 				8462F6C72C073E58004CC40D /* CityInfoDetailViewController.swift in Sources */,
 				8462F6CD2C0766CA004CC40D /* ViewControllerDelegate.swift in Sources */,
 				84A9F0882C0397E0007025E4 /* DateFormatter+.swift in Sources */,
@@ -333,6 +344,7 @@
 				8419BBC02C09F51900216272 /* MapViewController.swift in Sources */,
 				840D5B2D2C05E9BC00308BB1 /* UITableViewCell+.swift in Sources */,
 				840D5B282C05DD5800308BB1 /* AdTableViewCell.swift in Sources */,
+				8496E7602C235CC8009B9238 /* UIView+.swift in Sources */,
 				840D5AD82C04E27C00308BB1 /* RestaurantTableViewCell.swift in Sources */,
 				840D5ADE2C04F5F900308BB1 /* CityInfoViewController.swift in Sources */,
 				84A9F0782C034B3D007025E4 /* MagazineInfo.swift in Sources */,
@@ -472,6 +484,9 @@
 				DEVELOPMENT_TEAM = DB9LFYULKZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TravelProject/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "사용자의 현재 위치정보 제공을 위해 해당 관한이 필요합니다";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "사용자의 현재 위치정보 제공을 위해 해당 관한이 필요합니다";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -505,6 +520,9 @@
 				DEVELOPMENT_TEAM = DB9LFYULKZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TravelProject/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "사용자의 현재 위치정보 제공을 위해 해당 관한이 필요합니다";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "사용자의 현재 위치정보 제공을 위해 해당 관한이 필요합니다";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -560,6 +578,14 @@
 				minimumVersion = 25.0.1;
 			};
 		};
+		8496E75C2C234F98009B9238 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
 		84A9F0832C035486007025E4 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
@@ -575,6 +601,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 840D5AE32C055F1500308BB1 /* XCRemoteSwiftPackageReference "Cosmos" */;
 			productName = Cosmos;
+		};
+		8496E75D2C234F98009B9238 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8496E75C2C234F98009B9238 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 		84A9F0842C035486007025E4 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
